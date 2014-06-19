@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->    
+    <link href="css/style.css" rel="stylesheet" media="screen">
+</head>
+<body class="rhythm work-detail">
+  
+  <section class="header">
+    <div class="top-bar animated"></div>
+    <div class="menu-wrap">
+      <div class="logo-wrap">
+        <img src="img/logo.png"/>
+        
+        <div class="hidden-menu">
+          <ul class="nav">
+            <li><a href="">works</a></li>
+            <li><a href="">news</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="body">
+    
+
+    <div id="detail_frame">
+
+      <ul class="slidee clearfix">
+        <li>
+          <div class="info">
+            <h6>Revista Monet</h6>
+            <div class="project-name">ANDERSON "THE SPIDER" SILVA</div>
+            
+            <div class="project-info">
+              <h5>Project Info</h5>
+              llustration for Revista Monet (Editora Globo, Brasil) of Anderson Silva, inspired by the old communist russian posters. Art Direction: Henrique Lourenço Januário
+            </div>
+
+            <div class="project-type">
+              <h5>Project Type</h5>
+              <ul>
+                <li><a href="#">magazine</a></li>
+                <li><a href="#">vector</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-1.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-2.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-3.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-4.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-5.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-6.png"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/thumb-7.png"/></a>
+        </li>     
+      </ul>
+    </div>   
+
+  </section>
+
+
+  <footer class="blur">
+    <!-- <div class="scrollbar">
+      <div class="handle"></div>
+    </div> -->
+    <div class="containers">
+      <div class="row">
+        <div class="col-md-5">&copy; 2013 Indri Solihin / Ihin. All rights reserved.</div>        
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-5">
+          <ul class="nav socmed clearfix">
+            <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+            <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+          <ul class="nav socmed-stat clearfix">
+            <li>Share ^</li>
+            <li class="facebook"><a href="">0</a></li>
+            <li class="twitter"><a href="">0</a></li>
+            <li class="gplus"><a href="">0</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sly.js"></script>
+  <script src="js/blur.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      resizeDiv();
+
+      $('.blur').blurjs({
+        source: '.body',
+        overlay: 'rgba(255,255,255,0.4)'
+      });
+
+      $('.show-menu-btn').on('click', function(e){
+        $('.header').toggleClass("shown");
+        e.preventDefault();
+      });
+
+    });
+
+    window.onresize = function(event) {
+      
+    }
+
+    function resizeDiv() {
+      
+    }
+
+    
+
+
+    (function () {     
+
+      var $frame = $('#detail_frame');
+      var $wrap  = $frame.parent().parent();
+
+      // Call Sly on frame
+      $frame.sly({
+        horizontal: 1,
+        itemNav: 'basic',
+        smart: 1,
+        activateOn: 'click',
+        mouseDragging: 1,
+        touchDragging: 1,
+        releaseSwing: 1,
+        startAt: 0,
+        scrollBar: $wrap.find('.scrollbar'),
+        scrollBy: 1,
+        speed: 300,
+        elasticBounds: 1,
+        dragHandle: 1,
+        dynamicHandle: 1,
+        clickBar: 1,
+
+        // Buttons
+        prev: $wrap.find('.prev'),
+        next: $wrap.find('.next')
+      });
+    }());
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php/$0 [PT,L]  
+
+# BEGIN WordPress
+
+# END WordPress
+
+AuthName "cp"
+AuthUserFile "/home/escampin/.htpasswds/public_html/campina_paypal/passwd"
