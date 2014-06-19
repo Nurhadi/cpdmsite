@@ -61,7 +61,7 @@ class News extends CI_Controller {
 			$news = $this->news_model->update_news($news_id, $title, $keywords, $description, $content, $admin_id);
 		}
 
-		if($news !== true){
+		if($news !== false){
 			$config['upload_path'] = './../uploads/news/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 
@@ -93,7 +93,7 @@ class News extends CI_Controller {
 			{
 				$old_small_thumbnail_path = $this->news_model->get_small_thumbnail_path($news_id);
 				if($old_small_thumbnail_path !== false){
-					unlink("./../uploads/news/".$old_thumbnail_path);
+					unlink("./../uploads/news/".$old_small_thumbnail_path);
 				}
 
 				$data = array('upload_data' => $this->upload->data());
@@ -101,7 +101,12 @@ class News extends CI_Controller {
 				$upload_slider = $this->news_model->upload_small_thumbnail($file_path, $news_id);
 			}
 
-			$this->session->set_flashdata("status", "Success create data news");
+			if($form_action === "create"){
+				$this->session->set_flashdata("status", "Success create data news");
+			}
+			else if($form_action === "update"){
+				$this->session->set_flashdata("status", "Success update data news");
+			}
 			redirect("news");
 
 		}

@@ -126,12 +126,15 @@ $(document).ready(function(){
 		var title = $('#title').val();
 		var keywords = $('#keywords').val();
 		var description = $('#description').val();
-		var thumbnail = $('#thumbnail_path').val();
-		var small_thumbnail = $('#small_thumbnail_path').val();
-		var content = $('.content').val();
 		var form_action = $('#form_action').val();
+		if(form_action === "create"){
+			var content = $('.content').val();
+		}
+		else if(form_action === "update"){
+			var content = $('.content').html();
+		}
 
-		if(title === "" || keywords === "" || description === "" || content === "" || thumbnail === "" || small_thumbnail === "" || form_action === ""){
+		if(title === "" || keywords === "" || description === "" || content === "" || form_action === ""){
 			$(".alert").slideDown();
 			setTimeout(function(){
 				$(".alert").slideUp();

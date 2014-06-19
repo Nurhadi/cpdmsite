@@ -1,5 +1,5 @@
 <?php $this->load->view("header_view"); ?>
-		
+
 		<div id="container-admin" class="row">
 
 			<?php $this->load->view("sidebar_view"); ?>
@@ -15,7 +15,7 @@
 						<div class="box-content clearfix">
 							<div class="height-type-dashboard" id="box-display-content">
 								<h3 class="text-center">
-									Welcome, <?php 
+									Welcome, <?php
 										echo $firstname
 									?>
 								<h3>
