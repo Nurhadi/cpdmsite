@@ -48,7 +48,7 @@ class Pengelola extends CI_Controller {
 		$email = $this->input->post("email");
 		$telepon = $this->input->post("telepon");
 		$jabatan = $this->input->post("jabatan");
-		$foto = $this->input->post("foto");
+		$photo = $this->input->post("photo");
 		$pengelola_bagian = $this->input->post("pengelola_bagian");
 
 		$this->load->helper('date');

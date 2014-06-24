@@ -37,7 +37,12 @@ class News_model extends CI_Model
 
 	public function update_news($news_id, $title, $keywords, $description, $content, $admin_id)
 	{
-		$data = array("title" => $title, "keywords" => $keywords, "description" => $description, "content" => $content, "admin_id" => $admin_id);
+		if($content === ""){
+			$data = array("title" => $title, "keywords" => $keywords, "description" => $description, "admin_id" => $admin_id);
+		}
+		else{
+			$data = array("title" => $title, "keywords" => $keywords, "description" => $description, "content" => $content, "admin_id" => $admin_id);
+		}
 		$this->db->where("news_id", $news_id);
 		$this->db->update("news", $data);
 		$this->db->trans_complete();
