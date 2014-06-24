@@ -21,6 +21,13 @@ class Gallery_model extends CI_Model
 		return $result;
 	}
 
+	public function get_gallery_title($gallery_id){
+		$this->db->select("title");
+		$this->db->where("id", $gallery_id);
+		$result = $this->db->get("gallery");
+		return $result->row()->title;
+	}
+
 	public function get_data_gallery($gallery_id)
 	{
 		$this->db->where("id", $gallery_id);

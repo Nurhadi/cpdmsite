@@ -3,7 +3,7 @@
     <div id="page-wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">Gallery Photo Manager</h1>
+          <h1 class="page-header">Pengelola Manager</h1>
 					<?php
 						if($this->session->flashdata('status'))
 						{
@@ -113,33 +113,35 @@
         <div class="col-lg-12">
           <div class="panel panel-default">
             <div class="panel-heading">
-							Gallery Photo
-							<a href="javascript:void(0)" class="text-edit" id="text-add-gallery_photo">Add</a>
+							Pengelola
+							<a href="javascript:void(0)" class="text-edit" id="text-add-pengelola">Add</a>
             </div>
             <div class="panel-body">
-              <div id="box-table-gallery_photo" class="table-responsive" style="min-height:500px;">
-                <table class="table table-striped table-bordered table-hover display" id="gallery_photo">
+              <div id="box-table-pengelola" class="table-responsive" style="min-height:500px;">
+                <table class="table table-striped table-bordered table-hover display" id="pengelola">
                   <thead>
                     <tr>
 											<th class="text-center">No</th>
-											<th>Title</th>
-											<th class="text-center">Created at</th>
+                      <th>Name</th>
+                      <th class="text-center">Jabatan</th>
+											<th class="text-center">Pengelola Bagian</th>
 											<th class="text-center">Action</th>
                     </tr>
                   </thead>
                   <tbody>
 										<?php $i = 1; ?>
-										<?php foreach($gallery_photos->result() as $gallery_photo)
+										<?php foreach($pengelolas->result() as $pengelola)
 											{
 												?>
 												<tr>
 													<td class="text-center"><?php echo $i; ?></td>
-													<td><?php echo $gallery_photo->title; ?></td>
-													<td class="text-center"><?php echo date("d-m-Y H:i:s", strtotime($gallery_photo->created_at)); ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td class="text-center"><?php echo $pengelola->jabatan; ?></td>
+													<td class="text-center"><?php echo $pengelola->pengelola_bagian; ?></td>
 													<td class="text-center">
-														<a href="javascript:void(0)" data-gallery_photo-id="<?php echo $gallery_photo->id; ?>" class="text-detail-gallery_photo">Detail</a> |
-														<a href="javascript:void(0)" data-gallery_photo-id="<?php echo $gallery_photo->id; ?>" class="text-edit-gallery_photo">Edit</a> |
-														<a href="javascript:void(0)" data-gallery_photo-id="<?php echo $gallery_photo->id; ?>" class="text-delete-gallery_photo">Delete</a>
+														<a href="javascript:void(0)" data-pengelola-id="<?php echo $pengelola->id; ?>" class="text-detail-pengelola">Detail</a> |
+														<a href="javascript:void(0)" data-pengelola-id="<?php echo $pengelola->id; ?>" class="text-edit-pengelola">Edit</a> |
+														<a href="javascript:void(0)" data-pengelola-id="<?php echo $pengelola->id; ?>" class="text-delete-pengelola">Delete</a>
 													</td>
 												</tr>
 												<?php
@@ -153,36 +155,39 @@
 							<div id="box-form-slider" style="display:none; min-height:335px;">
 								<?php
 									$attributes = array('id' => 'form-slider');
-									echo form_open_multipart('gallery_photo/gallery_photo_process', $attributes);
+									echo form_open_multipart('pengelola/pengelola_process', $attributes);
 								?>
 									<input type="hidden" name="form_action" id="form_action" value="">
-									<input type="hidden" name="gallery_photo_id" id="gallery_photo_id" value="">
+									<input type="hidden" name="pengelola_id" id="pengelola_id" value="">
 									<p class="text-center alert">Please complete the form!</p>
 									<table cellpadding="10" cellspacing="10">
+										<tr>
+											<td>Nama</td>
+											<td width="100"></td>
+											<td><input type="text" class="form-control" name="nama" id="nama"/></td>
+										</tr>
+										<tr>
+											<td>Alamat</td>
+											<td width="100"></td>
+											<td><textarea class="form-control" name="alamat" id="alamat"></textarea></td>
+										</tr>
                     <tr>
-                      <td>Gallery</td>
+                      <td>Email</td>
                       <td width="100"></td>
-                      <td>
-                        <select class="form-control" name="gallery_id" id="gallery_id">
-                          <?php if($gallery->num_rows() > 0) { ?>
-                            <?php foreach ($gallery->result() as $g) { ?>
-                              <option value="<?php echo $g->id; ?>"><?php echo $g->title; ?></option>
-                            <?php } ?>
-                          <?php } ?>
-                        </select>
+                      <td><input type="email" class="form-control" name="email" id="email"/></td>
+                    </tr>
+                    <tr>
+                      <td>Telepon</td>
+                      <td width="100"></td>
+                      <td><input type="text" class="form-control" name="telepon" id="telepon"/></td>
                     </tr>
 										<tr>
-											<td>Title</td>
+											<td>Jabatan</td>
 											<td width="100"></td>
-											<td><input type="text" class="form-control" name="title" id="title"/></td>
+											<td><input type="text" class="form-control" name="jabatan" id="jabatan"/></td>
 										</tr>
 										<tr>
-											<td>Description</td>
-											<td width="100"></td>
-											<td><input type="text" class="form-control" name="description" id="description"/></td>
-										</tr>
-										<tr>
-											<td>Photo</td>
+											<td>Foto</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default" id="btn-choose-photo" value="Choose Image"/>
@@ -190,26 +195,44 @@
 												<img src="" id="image-photo" style="display:none; width:300px; text-align:center;" />
 											</td>
 										</tr>
+                    <tr>
+                      <td>Pengelola Bagian</td>
+                      <td width="100"></td>
+                      <td>
+                        <select class="form-control" name="pengelola_bagian" id="pengelola_bagian">
+                          <option value="CPD-MSITE">CPD-MSITE</option>
+                          <option value="Matematika">Matematika</option>
+                          <option value="Kimia">Kimia</option>
+                          <option value="Fisika">Fisika</option>
+                          <option value="Biologi">Biologi</option>
+                          <option value="Ilmu Komputer">Ilmu Komputer</option>
+                          <option value="IPA">IPA</option>
+                        </select>
+                      </td>
+                    </tr>
 										<tr>
 											<td></td>
 											<td width="100"></td>
 											<td>
-												<input type="button" class="btn btn-warning" id="btn-cancel-gallery_photo" value="Cancel">
-												<input type="submit" class="btn btn-primary" id="btn-submit-gallery_photo" value="Submit">
+												<input type="button" class="btn btn-warning" id="btn-cancel-pengelola" value="Cancel">
+												<input type="submit" class="btn btn-primary" id="btn-submit-pengelola" value="Submit">
 											</td>
 										</tr>
 									</table>
 								</form>
 							</div>
 
-              <div id="box-detail-gallery_photo" class="table-responsive" style="display:none; min-height:500px;">
-                <h3>Detail Gallery Photo</h3>
+              <div id="box-detail-pengelola" class="table-responsive" style="display:none; min-height:500px;">
+                <h3>Detail Pengelola</h3>
                 <table class="table">
-                  <tr><td width="200">No Gallery Photo</td><td><label id="d_gallery_photo_id"></label></td></tr>
-                	<tr><td width="200">Gallery</td><td><label id="d_gallery_id"></label></td></tr>
-                	<tr><td>Title</td><td><label id="d_title"></label></td></tr>
-                	<tr><td>Description</td><td><label id="d_description"></label></td></tr>
-                	<tr><td>Thumbnail</td><td><img src="" id="d_photo" width="200"/></td></tr>
+                	<tr><td width="200">No pengelola</td><td><label id="d_pengelola_id"></label></td></tr>
+                	<tr><td>Nama</td><td><label id="d_nama"></label></td></tr>
+                	<tr><td>Alamat</td><td><label id="d_alamat"></label></td></tr>
+                  <tr><td>Email</td><td><label id="d_email"></label></td></tr>
+                  <tr><td>Telepon</td><td><label id="d_telepon"></label></td></tr>
+                  <tr><td>Jabatan</td><td><label id="jabatan"></label></td></tr>
+                	<tr><td>Photo</td><td><img src="" id="d_photo" width="200"/></td></tr>
+                	<tr><td>Pengelola Bagian</td><td><label id="d_pengelola_bagian"></label></td></tr>
                 	<tr><td>Tanggal Dibuat</td><td><label id="d_tanggal_dibuat"></label></td></tr>
                 	<tr>
                 		<td></td>
@@ -235,6 +258,6 @@
     });
   </script>
 
-<script type="text/javascript" src="<?php echo base_url('assets/scripts/gallery_photo.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/scripts/pengelola.js');?>"></script>
 
 <?php $this->load->view('new_footer_view'); ?>

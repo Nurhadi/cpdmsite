@@ -3,7 +3,13 @@ $(document).ready(function(){
 	actions();
 
 	// data table
-	$('#gallery_photo').dataTable();
+	$('#pengelola').dataTable();
+
+	// redactor
+	$('#redactor').redactor({
+		focus: true,
+		minHeight: 125
+	});
 
 	// title
 	$("#text-edit-title").click(function(){
@@ -24,7 +30,7 @@ $(document).ready(function(){
 		$.ajax({
 			method: "post",
 			url: "page/update_page_title",
-			data: {page_id: 4, title: title},
+			data: {page_id: 5, title: title},
 			success:function(data){
 				if(data==="success"){
 					$("#box-edit-title").hide();
@@ -58,7 +64,7 @@ $(document).ready(function(){
 		$.ajax({
 			method: "post",
 			url: "page/update_page_keywords",
-			data: {page_id: 4, keywords: keywords},
+			data: {page_id: 5, keywords: keywords},
 			success:function(data){
 				if(data==="success"){
 					$("#box-edit-keywords").hide();
@@ -92,7 +98,7 @@ $(document).ready(function(){
 		$.ajax({
 			method: "post",
 			url: "page/update_page_description",
-			data: {page_id: 4, description: description},
+			data: {page_id: 5, description: description},
 			success:function(data){
 				if(data==="success"){
 					$("#box-edit-description").hide();
@@ -107,18 +113,21 @@ $(document).ready(function(){
 		});
 	});
 
-	// gallery_photo
-	$("#text-add-gallery_photo").click(function(){
+	// pengelola
+	$("#text-add-pengelola").click(function(){
 		$("#form_action").val("create");
-		$("#gallery_photo_id").val("");
-		$("#box-table-gallery_photo").hide();
+		$("#pengelola_id").val("");
+		$("#box-table-pengelola").hide();
 		$("#box-form-slider").fadeIn("slow");
 		return false;
 	});
 
-	$("#btn-submit-gallery_photo").click(function(){
-		var title = $('#title').val();
-		var description = $('#description').val();
+	$("#btn-submit-pengelola").click(function(){
+		var nama = $('#nama').val();
+		var alamat = $('#alamat').val();
+		var telepon = $('#telepon').val();
+		var email = $('#email').val();
+		var jabatan = $('#jabatan').val();
 		var form_action = $('#form_action').val();
 		if(form_action === "create"){
 			var content = $('.content').val();
@@ -127,7 +136,7 @@ $(document).ready(function(){
 			var content = $('.content').html();
 		}
 
-		if(title === "" || description === "" || content === "" || form_action === ""){
+		if(nama === "" || alamat === "" || telepon === "" || email === "" || jabatan === "" || form_action === ""){
 			$(".alert").slideDown();
 			setTimeout(function(){
 				$(".alert").slideUp();
@@ -139,9 +148,9 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#btn-cancel-gallery_photo").click(function(){
+	$("#btn-cancel-pengelola").click(function(){
 		$("#box-form-slider").hide();
-		$("#box-table-gallery_photo").fadeIn("slow");
+		$("#box-table-pengelola").fadeIn("slow");
 		return false;
 	});
 
@@ -149,54 +158,54 @@ $(document).ready(function(){
 		$("#photo_path").click();
 		return false;
 	});
-
-	$("#btn-choose-small-photo").click(function(){
-		$("#small_photo_path").click();
-		return false;
-	});
 });
 
 function actions(){
-	// gallery_photo
-	$(".text-detail-gallery_photo").click(function(){
-		var gallery_photo_id = $(this).attr("data-gallery_photo-id");
+	// pengelola
+	$(".text-detail-pengelola").click(function(){
+		var pengelola_id = $(this).attr("data-pengelola-id");
 
 		$.ajax({
 			method: "post",
-			url: "gallery_photo/detail_gallery_photo",
-			data: {gallery_photo_id: gallery_photo_id},
+			url: "pengelola/detail_pengelola",
+			data: {pengelola_id: pengelola_id},
 			success:function(data){
-				gallery_photo = data.split("|");
-				$("#d_gallery_photo_id").text(gallery_photo_id);
-				$("#d_gallery_id").text(gallery_photo[0]);
-				$("#d_title").text(gallery_photo[1]);
-				$("#d_description").text(gallery_photo[2]);
-				if(gallery_photo[3] !== ""){
-					$("#d_photo").attr("src", "./../uploads/gallery_photo/"+gallery_photo[3]);
+				pengelola = data.split("|");
+				$("#d_pengelola_id").text(pengelola_id);
+				$("#d_nama").text(pengelola[0]);
+				$("#d_alamat").text(pengelola[1]);
+				$("#d_email").text(pengelola[2]);
+				$("#d_telepon").text(pengelola[3]);
+				$("#d_jabatan").text(pengelola[4]);
+				if(pengelola[5] !== ""){
+					$("#d_photo").attr("src", "./../uploads/pengelola/"+pengelola[5]);
 				}
-				$("#d_tanggal_dibuat").text(gallery_photo[4]);
-				$("#box-table-gallery_photo").hide();
-				$("#box-detail-gallery_photo").fadeIn("slow");
+				$("#d_pengelola_bagian").text(pengelola[6]);
+				$("#d_tanggal_dibuat").text(pengelola[7]);
+				$("#box-table-pengelola").hide();
+				$("#box-detail-pengelola").fadeIn("slow");
 			}
 		});
 	});
 
-	$(".text-edit-gallery_photo").click(function(){
+	$(".text-edit-pengelola").click(function(){
 		$("#form_action").val("update");
-		var gallery_photo_id = $(this).attr("data-gallery_photo-id");
-		$("#gallery_photo_id").val(gallery_photo_id);
+		var pengelola_id = $(this).attr("data-pengelola-id");
+		$("#pengelola_id").val(pengelola_id);
 
 		$.ajax({
 			method: "post",
-			url: "gallery_photo/edit_gallery_photo",
-			data: {gallery_photo_id: gallery_photo_id},
+			url: "pengelola/edit_pengelola",
+			data: {pengelola_id: pengelola_id},
 			success:function(data){
 				var s = data.split("|");
-				$("#gallery_photo_id").val(gallery_photo_id);
-				$("#gallery_id").val(s[0]);
-				$("#title").val(s[1]);
-				$("#description").val(s[2]);
-				if(s[3] === ""){
+				$("#pengelola_id").val(pengelola_id);
+				$("#nama").val(s[0]);
+				$("#alamat").val(s[1]);
+				$("#email").val(s[2]);
+				$("#telepon").val(s[3]);
+				$("#jabatan").val(s[4]);
+				if(s[5] === ""){
 					$("#btn-choose-photo").removeAttr("style");
 					$("#image-photo").attr("src", "");
 					$("#image-photo").hide();
@@ -204,30 +213,32 @@ function actions(){
 				else{
 					$("#btn-choose-photo").css("display","block");
 					$("#btn-choose-photo").css("margin","0 auto 10px");
-					$("#image-photo").attr("src", "./../uploads/gallery_photo/"+s[3]);
+					$("#image-photo").attr("src", "./../uploads/pengelola/"+s[5]);
 					$("#image-photo").css("display", "block");
 					$("#image-photo").css("margin", "0 auto");
 					$("#image-photo").show();
 				}
 
-				$("#box-table-gallery_photo").hide();
+				$("#pengelola_bagian").val(s[6]);
+
+				$("#box-table-pengelola").hide();
 				$("#box-form-slider").fadeIn("slow");
 			}
 		});
 	});
 
-	$(".text-delete-gallery_photo").click(function(){
-		var gallery_photo_id = $(this).attr("data-gallery_photo-id");
-		var confirmation = confirm("Are you sure you want to delete this gallery_photo ?")
+	$(".text-delete-pengelola").click(function(){
+		var pengelola_id = $(this).attr("data-pengelola-id");
+		var confirmation = confirm("Are you sure you want to delete this pengelola ?")
 
 		if(confirmation === true){
 			$.ajax({
 				method: "post",
-				url: "gallery_photo/delete_gallery_photo",
-				data: {gallery_photo_id: gallery_photo_id},
+				url: "pengelola/delete_pengelola",
+				data: {pengelola_id: pengelola_id},
 				success:function(data){
 					if(data==="success"){
-						alert("gallery_photo deleted");
+						alert("pengelola deleted");
 						window.location.reload();
 					}
 					else{
@@ -239,13 +250,15 @@ function actions(){
 	});
 
 	$(".text-back-to-table").click(function(){
-		$("#d_gallery_photo_id").text("");
-		$("#d_gallery_id").text("");
+		$("#d_pengelola_id").text("");
 		$("#d_title").text("");
+		$("#d_keywords").text("");
 		$("#d_description").text("");
-		$("#d_photo").attr("src", "");
+		$("#d_thumbnail").attr("src", "");
+		$("#d_small_thumbnail").attr("src", "");
+		$("#d_content").text("");
 		$("#d_tanggal_dibuat").text("");
-		$("#box-detail-gallery_photo").hide();
-		$("#box-table-gallery_photo").fadeIn("slow");
+		$("#box-detail-pengelola").hide();
+		$("#box-table-pengelola").fadeIn("slow");
 	});
 }
