@@ -10,6 +10,7 @@ class Page_model extends CI_Model
 	public function get_page()
 	{
 		$this->db->where("page_id >", 5);
+		// $this->db->where("page_id !=", 26);
 		$this->db->order_by("page_id", "asc");
 		$result = $this->db->get("page");
 		return $result;
