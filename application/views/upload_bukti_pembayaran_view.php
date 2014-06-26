@@ -1,7 +1,7 @@
 <?php $this->load->view('header_view'); ?>
 
 	<section>
-		<div class="jumbotron" style="margin-top:-20px;">
+		<!-- <div class="jumbotron" style="margin-top:-20px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-lg-12">
@@ -10,7 +10,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="container">
 			<?php
 				if($this->session->flashdata('status'))
