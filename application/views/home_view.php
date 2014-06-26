@@ -108,23 +108,23 @@
 					<img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%"/>
 					<h6>News</h6>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Senin, 9 April 2014</p>
+					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
 				</div>
 				<div class="col-lg-4">
 					<img src="<?php echo base_url('uploads/news/sample_news_2.jpg'); ?>" width="100%"/>
 					<h6>News</h6>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Senin, 9 April 2014</p>
+					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
 				</div>
 				<div class="col-lg-4">
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Senin, 9 April 2014</p>
+					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
 					<hr>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Senin, 9 April 2014</p>
+					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
 					<hr>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Senin, 9 April 2014</p>
+					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
 					<hr>
 				</div>
 			</div>
@@ -164,6 +164,45 @@
 				<div class="col-lg-12 text-center">
 					<p style="font-size:1.5em; letter-spacing: 15px;">Kesan Pesan</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="container" style="margin-bottom:80px;">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="row">
+						<div class="col-lg-3">
+							<img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="85" height="85" style="border-radius:50%;"/>
+						</div>
+						<div class="col-lg-9">
+							<h5 style="color:#0D4173;"><b>Nurhadi Maulana</b> | Dosen FPMIPA UPI</h5>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="row">
+						<div class="col-lg-3">
+							<img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="85" height="85" style="border-radius:50%;"/>
+						</div>
+						<div class="col-lg-9">
+							<h5 style="color:#0D4173;"><b>Nurhadi Maulana</b> | Dosen FPMIPA UPI</h5>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="row">
+						<div class="col-lg-3">
+							<img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="85" height="85" style="border-radius:50%;"/>
+						</div>
+						<div class="col-lg-9">
+							<h5 style="color:#0D4173;"><b>Nurhadi Maulana</b> | Dosen FPMIPA UPI</h5>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
