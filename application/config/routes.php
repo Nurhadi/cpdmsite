@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "peserta/daftar";
+$route['default_controller'] = "home/index";
 $route['peserta/daftar'] = "peserta/daftar";
 $route['peserta/upload_bukti_pembayaran'] = "peserta/upload_bukti_pembayaran";
 $route['404_override'] = '';
