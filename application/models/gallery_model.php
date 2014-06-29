@@ -1,0 +1,12 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Gallery_model extends CI_Model {
+
+  public function __construct()
+  {
+      parent::__construct();
+  }
+}
+
+/* End of file gallery_model.php */
+/* Location: ./application/controllers/gallery_model.php */
