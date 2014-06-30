@@ -6,21 +6,23 @@
 	<link rel="shortcut icon" href="<?php echo base_url('assets/images/logo-upi.png'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="<?php echo base_url('assets/styles/style.css'); ?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('assets/styles/jquery.datetimepicker.css'); ?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('assets/styles/jquery.bxslider.css'); ?>" rel="stylesheet">
-	<style>
-		body{
-			padding-top:70px;
-		}
-	</style>
+  <link href="<?php echo base_url('assets/styles/style.css'); ?>" rel="stylesheet" media="screen">
+  <link href="<?php echo base_url('assets/styles/jquery.datetimepicker.css'); ?>" rel="stylesheet" media="screen">
+  <link href="<?php echo base_url('assets/styles/jquery.bxslider.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/styles/dataTables.bootstrap.css');?>" rel="stylesheet">
+  <style>
+    body{
+      padding-top:70px;
+    }
+  </style>
 
-	<script src="<?php echo base_url('assets/scripts/jquery.js'); ?>"></script>
-	<script src="<?php echo base_url('assets/scripts/bootstrap.min.js'); ?>"></script>
-	<script src="<?php echo base_url('assets/scripts/jquery.datetimepicker.js'); ?>"></script>
-	<script src="<?php echo base_url('assets/scripts/jquery.validate.js'); ?>"></script>
-	<script src="<?php echo base_url('assets/scripts/jquery.bxslider.js'); ?>"></script>
-	<script type="text/javascript">
+  <script src="<?php echo base_url('assets/scripts/jquery.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/scripts/bootstrap.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/scripts/jquery.datetimepicker.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/scripts/jquery.validate.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/scripts/jquery.bxslider.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/scripts/jquery.dataTables.min.js');?>"></script>
+  <script type="text/javascript">
     $(document).ready(function(){
       $('#datetimepicker').datetimepicker({
       	format:'Y-m-d',
