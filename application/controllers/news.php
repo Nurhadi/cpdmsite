@@ -10,8 +10,13 @@ class News extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('news_view');
-	}
+    $this->load->view('news_view');
+  }
+
+  public function detail()
+  {
+		$this->load->view('news_detail_view');
+  }
 }
 
 /* End of file news.php */

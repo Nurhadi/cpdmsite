@@ -6347,3 +6347,4 @@ td.visible-print {
 .bx-next{z-index:0 !important;}
 .paginate_disabled_previous, .paginate_enabled_previous{margin-right:7px; cursor:pointer;}
 .paginate_disabled_next, .paginate_enabled_next{cursor:pointer;}
+section{min-height:500px;}

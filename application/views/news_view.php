@@ -26,14 +26,14 @@
 
     <div class="container" style="margin-top:10px; margin-bottom:35px;">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-8">
               <div class="row" style="margin-bottom:30px;">
                 <div class="col-lg-4">
                   <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
                 </div>
-                <div class="col-lg-8 text-left">
+                <div class="col-lg-8">
                   <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                   </a>
@@ -46,7 +46,7 @@
                 <div class="col-lg-4">
                   <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
                 </div>
-                <div class="col-lg-8 text-left">
+                <div class="col-lg-8">
                   <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                   </a>
@@ -59,7 +59,7 @@
                 <div class="col-lg-4">
                   <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
                 </div>
-                <div class="col-lg-8 text-left">
+                <div class="col-lg-8">
                   <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                   </a>
@@ -72,7 +72,7 @@
                 <div class="col-lg-4">
                   <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
                 </div>
-                <div class="col-lg-8 text-left">
+                <div class="col-lg-8">
                   <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                   </a>
@@ -82,7 +82,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 text-left">
+            <div class="col-lg-4">
               <div style="border-bottom:1px solid #ccc; margin-bottom:10px;">
                 <p style="font-size:1.3em; font-weight:bold; color:#0D4173;">Archives News</p>
               </div>

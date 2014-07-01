@@ -23,9 +23,9 @@
         </div>
         <div class="col-lg-6 text-right">
           <span style="color:#0D4173;">Follow us on&nbsp;</span>
-          <a href="#"><img src="<?php echo base_url('assets/images/icon_facebook.png'); ?>"/></a>
-          <a href="#"><img src="<?php echo base_url('assets/images/icon_twitter.png'); ?>"/></a>
-          <a href="#"><img src="<?php echo base_url('assets/images/icon_google_plus.png'); ?>"/></a>
+          <a href="#"><img src="<?php echo base_url('assets/images/fb.png'); ?>" width="30"/></a>&nbsp;
+          <a href="#"><img src="<?php echo base_url('assets/images/tw.png'); ?>" width="30"/></a>&nbsp;
+          <a href="#"><img src="<?php echo base_url('assets/images/gplus.png'); ?>" width="30"/></a>
         </div>
       </div>
     </div>

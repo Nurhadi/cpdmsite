@@ -42,6 +42,7 @@ $route['default_controller'] = "home/index";
 $route['peserta/daftar'] = "peserta/daftar";
 $route['peserta/upload_bukti_pembayaran'] = "peserta/upload_bukti_pembayaran";
 $route['berita'] = "news/index";
+$route['berita/detail'] = "news/detail";
 $route['404_override'] = '';
 
 
