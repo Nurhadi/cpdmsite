@@ -6341,7 +6341,7 @@ td.visible-print {
 .photo_gallery .slide{margin-right:0px !important; width:345px !important;}
 .photo_gallery .slide img{height:260px;}
 .bx-wrapper{margin:0px;}
-.bx-wrapper .bx-viewport{left:0px; box-shadow:none; height:272px !important;}
+.bx-wrapper .bx-viewport{left:0px !important; box-shadow:none; height:272px !important;}
 .bx-pager{display:none !important;}
 .bx-prev{z-index:0 !important;}
 .bx-next{z-index:0 !important;}
