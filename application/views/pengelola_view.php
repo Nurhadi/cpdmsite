@@ -14,9 +14,7 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="list-group">
-                <a href="#" class="list-group-item text-left active">
-                  Cras justo odio
-                </a>
+                <a href="#" class="list-group-item text-left active">Cras justo odio</a>
                 <a href="#" class="list-group-item text-left">Dapibus ac facilisis in</a>
                 <a href="#" class="list-group-item text-left">Morbi leo risus</a>
                 <a href="#" class="list-group-item text-left">Porta ac consectetur ac</a>

@@ -133,7 +133,7 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
+  font-family: gisha, inherit;
   font-size: 100%;
   margin: 0;
 }
@@ -3864,7 +3864,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
+  background-color: #fff;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #cccccc;
