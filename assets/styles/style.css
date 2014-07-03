@@ -1,4 +1,4 @@
-/*!
+!
  * Bootstrap v3.0.0
  *
  * Copyright 2013 Twitter, Inc
@@ -6347,9 +6347,10 @@ td.visible-print {
 .box-gallery-photo-last{padding-left:0px;}
 
 /* bxslider custom style */
-.bx-wrapper{max-width:none !important;}
-.photo_gallery .slide{margin-right:0px !important; width:345px !important;}
+.bx-wrapper{max-width:none !important; border:1px solid red;}
+/* .photo_gallery .slide{margin-right:0px !important; width:345px !important;} */
 .photo_gallery .slide img{height:260px;}
+.photo_gallery .slide{margin-right:0px !important; width: 324px !important;}
 .bx-wrapper{margin:0px;}
 .bx-wrapper .bx-viewport{left:0px !important; box-shadow:none; height:272px !important;}
 .bx-pager{display:none !important;}
@@ -6408,4 +6409,4 @@ section{min-height:500px;}
     -moz-border-radius:6px 0 6px 6px;
     border-radius:6px 0 6px 6px;
 }
-/* dropdown submenu */
+/* dropdown submenu
