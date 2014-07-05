@@ -2,7 +2,13 @@
 <html>
 <head>
 
-	<title>CPD-MSITE FPMIPA - Universitas Pendidikan Indonesia</title>
+	<?php if($title === "") { ?>
+    <title><?php echo $page_title; ?></title>
+  <?php } else { ?>
+    <title><?php echo $title; ?> - <?php echo $page_title; ?></title>
+  <?php } ?>
+  <meta name="description" content="<?php echo $description; ?>">
+  <meta name="keywords" content="<?php echo $keywords; ?>">
 	<link rel="shortcut icon" href="<?php echo base_url('assets/images/logo-upi.png'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 

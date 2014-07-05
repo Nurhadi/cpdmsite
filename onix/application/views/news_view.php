@@ -175,7 +175,7 @@
 											<td><input type="text" class="form-control" name="description" id="description"/></td>
 										</tr>
 										<tr>
-											<td>Thumbnail</td>
+											<td>Thumbnail (750 x 422)</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default" id="btn-choose-thumbnail" value="Choose Image"/>
@@ -184,7 +184,7 @@
 											</td>
 										</tr>
 										<tr>
-											<td>Small Thumbnail</td>
+											<td>Small Thumbnail (360 x 203)</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default" id="btn-choose-small-thumbnail" value="Choose Image"/>

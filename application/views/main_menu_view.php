@@ -58,7 +58,6 @@
 				<ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="<?php echo site_url('peserta/daftar'); ?>">
-	        		<!-- <button class="btn btn-success" style="background:transparent; color:#01C1F4; border:1px solid #01C1F4;">Daftar</button> -->
 	 						<button style="border:1px solid #01C1F4; background:transparent; color:#01C1F4; border-radius:5px; padding:0 35px; font-size:0.8em;">Daftar</button>
 	        	</a>
 	        </li>

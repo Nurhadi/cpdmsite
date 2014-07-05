@@ -312,7 +312,7 @@ $(document).ready(function(){
 				$("#d_slider_title").text(slider[0]);
 				$("#d_slider_description").text(slider[1]);
 				if(slider[14] !== ""){
-					$("#d_slider_path").attr("src", "./../uploads/pendaftaran/"+slider[2]);
+					$("#d_slider_path").attr("src", "./../uploads/slider/"+slider[2]);
 				}
 				$("#d_status").text(slider[3]);
 				$("#d_tanggal_dibuat").text(slider[4]);

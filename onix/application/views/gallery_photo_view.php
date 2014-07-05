@@ -182,7 +182,7 @@
 											<td><input type="text" class="form-control" name="description" id="description"/></td>
 										</tr>
 										<tr>
-											<td>Photo</td>
+											<td>Photo (324 x 260)</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default" id="btn-choose-photo" value="Choose Image"/>
@@ -209,7 +209,7 @@
                 	<tr><td width="200">Gallery</td><td><label id="d_gallery_id"></label></td></tr>
                 	<tr><td>Title</td><td><label id="d_title"></label></td></tr>
                 	<tr><td>Description</td><td><label id="d_description"></label></td></tr>
-                	<tr><td>Thumbnail</td><td><img src="" id="d_photo" width="200"/></td></tr>
+                	<tr><td>Thumbnail</td><td><img src="" id="d_photo"/></td></tr>
                 	<tr><td>Tanggal Dibuat</td><td><label id="d_tanggal_dibuat"></label></td></tr>
                 	<tr>
                 		<td></td>

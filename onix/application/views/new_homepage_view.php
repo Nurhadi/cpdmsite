@@ -283,7 +283,7 @@
 											<td><textarea class="form-control" name="slider_description" id="slider_description" cols="50" rows="5"></textarea></td>
 										</tr>
 										<tr>
-											<td>Image Slider</td>
+											<td>Image Slider (1140 x 641)</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default btn-choose-slider" id="btn-choose-image" value="Choose Image"/>

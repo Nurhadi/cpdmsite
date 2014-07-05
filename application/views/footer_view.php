@@ -9,7 +9,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-          <button class="btn btn-success" style="background:transparent; color:#01C1F4; border:1px solid #01C1F4;">Daftar Sekarang</button>
+          <a href="<?php echo site_url('peserta/daftar'); ?>">
+            <button class="btn btn-success" style="background:transparent; color:#01C1F4; border:1px solid #01C1F4;">Daftar Sekarang</button>
+          </a>
         </div>
       </div>
     </div>
@@ -23,9 +25,9 @@
         </div>
         <div class="col-lg-6 text-right">
           <span style="color:#0D4173;">Follow us on&nbsp;</span>
-          <a href="#"><img src="<?php echo base_url('assets/images/fb.png'); ?>" width="30"/></a>&nbsp;
-          <a href="#"><img src="<?php echo base_url('assets/images/tw.png'); ?>" width="30"/></a>&nbsp;
-          <a href="#"><img src="<?php echo base_url('assets/images/gplus.png'); ?>" width="30"/></a>
+          <a href="<?php echo $facebook; ?>" target="blank"><img src="<?php echo base_url('assets/images/fb.png'); ?>" width="30"/></a>&nbsp;
+          <a href="<?php echo $twitter; ?>" target="blank"><img src="<?php echo base_url('assets/images/tw.png'); ?>" width="30"/></a>&nbsp;
+          <a href="<?php echo $google_plus; ?>" target="blank"><img src="<?php echo base_url('assets/images/gplus.png'); ?>" width="30"/></a>
         </div>
       </div>
     </div>
