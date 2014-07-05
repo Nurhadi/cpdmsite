@@ -43,6 +43,17 @@ $route['peserta/daftar'] = "peserta/daftar";
 $route['peserta/upload_bukti_pembayaran'] = "peserta/upload_bukti_pembayaran";
 $route['berita'] = "news/index";
 $route['berita/detail'] = "news/detail";
+
+# pelatihan/bimtek
+$route['pelatihan/bimtek/penjelasan_program_bimtek'] = "pelatihan/penjelasan_program_bimtek";
+$route['pelatihan/bimtek/kurikulum_dan_struktur_bidang'] = "pelatihan/kurikulum_dan_struktur_bidang";
+$route['pelatihan/bimtek/jadwal'] = "pelatihan/jadwal";
+$route['pelatihan/bimtek/fasilitas'] = "pelatihan/fasilitas";
+$route['pelatihan/bimtek/peserta'] = "pelatihan/peserta";
+$route['pelatihan/bimtek/evaluasi'] = "pelatihan/evaluasi";
+$route['pelatihan/bimtek/sertifikat'] = "pelatihan/sertifikat";
+$route['pelatihan/bimtek/informasi_penginapan'] = "pelatihan/informasi_penginapan";
+
 $route['404_override'] = '';
 
 

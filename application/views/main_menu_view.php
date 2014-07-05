@@ -17,41 +17,36 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile</span></a>
 	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">Latar Belakang</a></li>
-	            <li><a href="#">Visi dan Misi</a></li>
-	            <li><a href="#">Pengelola</a></li>
+	            <li><a href="<?php echo site_url('profile/latar_belakang'); ?>">Latar Belakang</a></li>
+	            <li><a href="<?php echo site_url('profile/visi_dan_misi'); ?>">Visi dan Misi</a></li>
+	            <li><a href="<?php echo site_url('profile/pengelola'); ?>">Pengelola</a></li>
 	          </ul>
 	        </li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pelatihan</span></a>
 	          <ul class="dropdown-menu" role="menu">
-				      <li class="dropdown-submenu"> <a tabindex="-1" href="#">Bimtek</a>
+				      <li class="dropdown-submenu"><a tabindex="-1" href="#">Bimtek</a>
 	              <ul class="dropdown-menu">
-                  <li><a tabindex="-1" href="#">Penjelasan Program Bimtek</a></li>
-                  <li><a href="#">Kurikulum dan Struktur Bidang</a></li>
-                  <li><a href="#">Jadwal</a></li>
-                  <li><a href="#">Fasilitas</a></li>
-                  <li class="dropdown-submenu"><a href="#">Peserta</a>
-                  	<ul class="dropdown-menu">
-                  		<li><a href="#">Persyaratan Peserta</a>
-                  		<li><a href="#">Peserta Terdaftar</a>
-                  	</ul>
-                  </li>
-                  <li><a href="#">Evaluasi</a></li>
-                  <li><a href="#">Sertifikat</a></li>
-                  <li><a href="#">Informasi Penginapan</a></li>
+                  <li><a tabindex="-1" href="<?php echo site_url('pelatihan/bimtek/penjelasan_program_bimtek'); ?>">Penjelasan Program Bimtek</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/kurikulum_dan_struktur_bidang'); ?>">Kurikulum dan Struktur Bidang</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/jadwal'); ?>">Jadwal</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/fasilitas'); ?>">Fasilitas</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/peserta'); ?>">Peserta</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/evaluasi'); ?>">Evaluasi</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/sertifikat'); ?>">Sertifikat</a></li>
+                  <li><a href="<?php echo site_url('pelatihan/bimtek/informasi_penginapan'); ?>">Informasi Penginapan</a></li>
                 </ul>
                </li>
-	            <li><a href="#">Pengelola Laboratorium Universitas / Perguruan Tinggi</a></li>
-	            <li><a href="#">HOT - Based Science and Mathematics Pedagogy</a></li>
-	            <li><a href="#">E-Learning in SMITE</a></li>
-	            <li><a href="#">Preparation on SMITE Olympiade</a></li>
+	            <li><a href="<?php echo site_url('pelatihan/pengelola_laboratorium_universitas'); ?>">Pengelola Laboratorium Universitas / Perguruan Tinggi</a></li>
+	            <li><a href="<?php echo site_url('pelatihan/hot_based_science_and_mathematics_pedagogy'); ?>">HOT - Based Science and Mathematics Pedagogy</a></li>
+	            <li><a href="<?php echo site_url('pelatihan/e_learning_in_smite'); ?>">E-Learning in SMITE</a></li>
+	            <li><a href="<?php echo site_url('pelatihan/preparation_on_smite_olympiade'); ?>">Preparation on SMITE Olympiade</a></li>
 	          </ul>
 	        </li>
 					<!-- <li><a href="<?php echo site_url('peserta/daftar'); ?>">Pendaftaran</a></li> -->
 					<li><a href="#">Download</a></li>
-					<li><a href="#">Pilot School</a></li>
-					<li><a href="#">Galeri</a></li>
+					<li><a href="<?php echo site_url('pilot_school'); ?>">Pilot School</a></li>
+					<li><a href="<?php echo site_url('gallery'); ?>">Galeri</a></li>
 					<!-- <li><a href="<?php echo site_url('peserta/upload_bukti_pembayaran'); ?>">Upload Bukti Pembayaran</a></li> -->
 				</ul>
 

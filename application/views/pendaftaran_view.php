@@ -1,16 +1,6 @@
 <?php $this->load->view('header_view'); ?>
 
 	<section>
-		<!-- <div class="jumbotron" style="margin-top:-20px;">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-lg-12">
-						<h1>CPD-MSITE FPMIPA UPI</h1>
-						<p>Center for Professional Development on Mathematics, Science, and Information Technology Education</p>
-					</div>
-				</div>
-			</div>
-		</div> -->
 		<div class="container">
 			<?php
 				if($this->session->flashdata('status'))
@@ -52,6 +42,10 @@
 								$attributes = array('class' => 'bs-example form-horizontal', 'id' => 'form-pendaftaran');
 								echo form_open_multipart('peserta/proses_daftar', $attributes);
 							?>
+								<p class="text-center">
+									Klik <a href="<?php echo site_url('peserta/upload_bukti_pembayaran'); ?>" style="color:#0D4173; font-weight:bold;">disini</a> untuk mengirimkan bukti pembayaran
+								</p>
+								<br>
 								<div class="form-group">
 									<label for="kategori" class="col-lg-3 control-label">Kategori</label>
 									<div class="col-lg-4">

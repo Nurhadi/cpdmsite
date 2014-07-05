@@ -6,11 +6,11 @@
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-3">
-              <?php $this->load->view('sidebar_bimtek_view.php'); ?>
+              <?php $this->load->view('sidebar_pelatihan.php'); ?>
             </div>
             <div class="col-lg-9">
-              <h4 class="text-center" style="line-height:28px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h4>
-              <hr>
+              <h4 class="text-center"><?php echo $title; ?></h4>
+              <h5 class="text-center" style="line-height:28px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h5><hr>
               <!-- Nav tabs -->
               <ul class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#matematika" role="tab" data-toggle="tab">Matematika</a></li>

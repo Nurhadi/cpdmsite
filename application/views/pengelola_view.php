@@ -6,40 +6,33 @@
 </script>
 
 	<section>
-
-
     <div class="container" style="margin-top:10px; margin-bottom:35px;">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-3">
-              <div class="list-group">
-                <a href="#" class="list-group-item text-left active">Cras justo odio</a>
-                <a href="#" class="list-group-item text-left">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item text-left">Morbi leo risus</a>
-                <a href="#" class="list-group-item text-left">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item text-left">Vestibulum at eros</a>
-              </div>
+              <?php $this->load->view('sidebar_profile'); ?>
             </div>
             <div class="col-lg-9">
-              <h4 class="text-center" style="line-height:28px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h4>
+              <h4 class="text-center"><?php echo $title; ?></h4>
+              <h5 class="text-center" style="line-height:28px;"><?php echo $content; ?></h5>
               <hr>
               <table class="table table-bordered table-hover table-striped display" id="cpdmsite" width="100%">
                 <thead>
                   <tr>
-                    <td>No</td>
+                    <td class="text-center">No</td>
                     <td>Nama</td>
                     <td>Jabatan</td>
-                    <td>Action</td>
+                    <td class="text-center">Action</td>
                   </tr>
                 </thead>
                 <tbody>
                   <?php for($i = 1; $i < 51; $i++) { ?>
                     <tr>
-                      <td><?php echo $i; ?></td>
+                      <td class="text-center"><?php echo $i; ?></td>
                       <td>Nurhadi Maulana</td>
                       <td>Dosen FPMIPA</td>
-                      <td><a href="#">Detail</a></td>
+                      <td class="text-center"><a href="#">Detail</a></td>
                     </tr>
                   <?php } ?>
                 </tbody>
