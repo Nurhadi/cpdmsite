@@ -20,19 +20,19 @@
 							  <!-- Wrapper for slides -->
 							  <div class="carousel-inner">
 							    <div class="item active">
-							      <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" alt="testing slider">
+							      <img src="<?php echo base_url('uploads/slider/slider1.jpg'); ?>" alt="testing slider">
 							    </div>
 							    <div class="item">
-							      <img src="<?php echo base_url('uploads/slider/sample_slider_2.jpg'); ?>" alt="testing slider">
+							      <img src="<?php echo base_url('uploads/slider/slider2.jpg'); ?>" alt="testing slider">
 							    </div>
 							    <div class="item">
-							      <img src="<?php echo base_url('uploads/slider/sample_slider_3.jpg'); ?>" alt="testing slider">
+							      <img src="<?php echo base_url('uploads/slider/slider3.jpg'); ?>" alt="testing slider">
 							    </div>
 							    <div class="item">
-							      <img src="<?php echo base_url('uploads/slider/sample_slider_4.jpg'); ?>" alt="testing slider">
+							      <img src="<?php echo base_url('uploads/slider/slider4.jpg'); ?>" alt="testing slider">
 							    </div>
 							    <div class="item">
-							      <img src="<?php echo base_url('uploads/slider/sample_slider_5.jpg'); ?>" alt="testing slider">
+							      <img src="<?php echo base_url('uploads/slider/slider5.jpg'); ?>" alt="testing slider">
 							    </div>
 							  </div>
 

@@ -28,8 +28,10 @@
 		<div class="container" style="margin-bottom:45px;">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<button class="btn btn-success" style="background:transparent; color:#01C1F4; border:1px solid #01C1F4;">Back to Album Photo</button>
-				</div>
+					<a href="<?php echo site_url('gallery'); ?>">
+            <button class="btn btn-success" style="background:transparent; color:#01C1F4; border:1px solid #01C1F4;">Back to Album Photo</button>
+				  </a>
+        </div>
 			</div>
 		</div>
 	</section>
