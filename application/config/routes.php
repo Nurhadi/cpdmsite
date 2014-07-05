@@ -54,6 +54,9 @@ $route['pelatihan/bimtek/evaluasi'] = "pelatihan/evaluasi";
 $route['pelatihan/bimtek/sertifikat'] = "pelatihan/sertifikat";
 $route['pelatihan/bimtek/informasi_penginapan'] = "pelatihan/informasi_penginapan";
 
+# gallery/photos
+$route['gallery/photos/(:any)/(:num)'] = "gallery/gallery_photo";
+
 $route['404_override'] = '';
 
 

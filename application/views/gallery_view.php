@@ -77,48 +77,25 @@
 
 		<div style="margin-bottom:15px;" class="container">
 			<div class="row">
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:24px;">
-					<img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-					<a href="">
-						<h5><b>Gallery Title (15 Photo)</b></h5>
-					</a>
-					<p style="color:#01C1F4;">Senin, 9 April 2014</p>
-				</div>
+				<?php if($galleries->num_rows() > 0) { ?>
+					<?php $days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; ?>
+					<?php $photos_count = 1; ?>
+					<?php $gallery_id = 0; ?>
+					<?php foreach($galleries->result() as $gallery) { ?>
+						<?php if($gallery_id === 0 || $gallery_id != $gallery->gallery_id ) { ?>
+							<div class="col-lg-4" style="margin-bottom:24px;">
+								<a href="<?php echo site_url('gallery/photos/'.url_title($gallery->gallery_title).'/'.$gallery->gallery_id); ?>">
+									<img src="<?php echo base_url('uploads/gallery_photo/'.$gallery->filename); ?>" width="100%"/>
+								</a>
+								<a href="<?php echo site_url('gallery/photos/'.url_title($gallery->gallery_title).'/'.$gallery->gallery_id); ?>">
+									<h5><b><?php echo $gallery->gallery_title; ?> (Lihat album)</b></h5>
+								</a>
+								<p style="color:#01C1F4;"><?php echo $days[date("N", strtotime($gallery->created_at))].", ".date("d M Y", strtotime($gallery->created_at)); ?></p>
+							</div>
+						<?php } ?>
+						<?php $gallery_id = $gallery->gallery_id; ?>
+					<?php } ?>
+				<?php } ?>
 			</div>
 		</div>
 

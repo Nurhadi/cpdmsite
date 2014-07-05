@@ -9,8 +9,8 @@ class Gallery extends CI_Controller {
 		$this->load->library('homepage');
 	}
 
-	public function index()
-	{
+  public function index()
+  {
     $data['homepage'] = $this->homepage->get_homepage_info();
     $data['page_title'] = $data['homepage']->title;
     $data['facebook'] = $data['homepage']->facebook;
@@ -24,8 +24,31 @@ class Gallery extends CI_Controller {
       $data['description'] = $p->description;
     }
 
-		$this->load->view('gallery_view', $data);
-	}
+    $data['galleries'] = $this->gallery_model->get_galleries();
+
+    $this->load->view('gallery_view', $data);
+  }
+
+	public function gallery_photo()
+  {
+    $data['homepage'] = $this->homepage->get_homepage_info();
+    $data['page_title'] = $data['homepage']->title;
+    $data['facebook'] = $data['homepage']->facebook;
+    $data['twitter'] = $data['homepage']->twitter;
+    $data['google_plus'] = $data['homepage']->google_plus;
+
+    $page = $this->page_model->get_data_page(4);
+    foreach($page->result() as $p){
+      $data['title'] = $p->title;
+      $data['keywords'] = $p->keywords;
+      $data['description'] = $p->description;
+    }
+
+    $gallery_id = $this->uri->segment(4);
+    $data['gallery_photos'] = $this->gallery_model->get_gallery_photos($gallery_id);
+
+    $this->load->view('gallery_photo_view', $data);
+  }
 }
 
 /* End of file gallery.php */

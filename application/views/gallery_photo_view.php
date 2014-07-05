@@ -13,66 +13,15 @@
 
 		<div style="margin-bottom:15px;" class="container">
 			<div class="row">
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-        </div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-					  <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
-				<div class="col-lg-4" style="margin-bottom:28px;">
-          <a href="">
-            <img src="<?php echo base_url('uploads/slider/sample_slider_1.jpg'); ?>" width="100%"/>
-          </a>
-				</div>
+        <?php if($gallery_photos->num_rows() > 0) { ?>
+          <?php foreach($gallery_photos->result() as $photo) { ?>
+            <div class="col-lg-4" style="margin-bottom:28px;">
+              <a href="">
+                <img src="<?php echo base_url('uploads/gallery_photo/'.$photo->filename); ?>" width="100%" alt="<?php echo $photo->title; ?>" title="<?php echo $photo->title; ?>"/>
+              </a>
+            </div>
+          <?php } ?>
+        <?php } ?>
 			</div>
 		</div>
 
