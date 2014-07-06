@@ -1,7 +1,13 @@
 <?php $this->load->view('header_view'); ?>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#cpdmsite').dataTable();
+    $('#table-cpdmsite').dataTable();
+    $('#table-matematika').dataTable();
+    $('#table-kimia').dataTable();
+    $('#table-fisika').dataTable();
+    $('#table-biologi').dataTable();
+    $('#table-ilmu_komputer').dataTable();
+    $('#table-ipa').dataTable();
   });
 </script>
 
@@ -17,26 +23,194 @@
               <h4 class="text-center"><?php echo $title; ?></h4>
               <h5 class="text-center" style="line-height:28px;"><?php echo $content; ?></h5>
               <hr>
-              <table class="table table-bordered table-hover table-striped display" id="cpdmsite" width="100%">
-                <thead>
-                  <tr>
-                    <td class="text-center">No</td>
-                    <td>Nama</td>
-                    <td>Jabatan</td>
-                    <td class="text-center">Action</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php for($i = 1; $i < 51; $i++) { ?>
-                    <tr>
-                      <td class="text-center"><?php echo $i; ?></td>
-                      <td>Nurhadi Maulana</td>
-                      <td>Dosen FPMIPA</td>
-                      <td class="text-center"><a href="#">Detail</a></td>
-                    </tr>
-                  <?php } ?>
-                </tbody>
-              </table>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#cpdmsite" role="tab" data-toggle="tab">CPD-MSITE</a></li>
+                <li><a href="#matematika" role="tab" data-toggle="tab">Matematika</a></li>
+                <li><a href="#kimia" role="tab" data-toggle="tab">Kimia</a></li>
+                <li><a href="#fisika" role="tab" data-toggle="tab">Fisika</a></li>
+                <li><a href="#biologi" role="tab" data-toggle="tab">Biologi</a></li>
+                <li><a href="#ilmu_komputer" role="tab" data-toggle="tab">Ilmu Komputer</a></li>
+                <li><a href="#ipa" role="tab" data-toggle="tab">IPA</a></li>
+              </ul>
+
+              <!-- Tab panes cpdmsite -->
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="cpdmsite">
+                  <table class="table table-bordered table-hover table-striped display" id="table-cpdmsite" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_cpdmsite->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="matematika">
+                  <table class="table table-bordered table-hover table-striped display" id="table-matematika" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_matematika->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="kimia">
+                  <table class="table table-bordered table-hover table-striped display" id="table-kimia" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_kimia->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="fisika">
+                  <table class="table table-bordered table-hover table-striped display" id="table-fisika" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_fisika->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="biologi">
+                  <table class="table table-bordered table-hover table-striped display" id="table-biologi" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_biologi->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="ilmu_komputer">
+                  <table class="table table-bordered table-hover table-striped display" id="table-ilmu_komputer" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_ilmu_komputer->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade in" id="ipa">
+                  <table class="table table-bordered table-hover table-striped display" id="table-ipa" width="100%">
+                    <thead>
+                      <tr>
+                        <td class="text-center">No</td>
+                        <td>Nama</td>
+                        <td>Jabatan</td>
+                        <td class="text-center">Action</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; ?>
+                      <?php foreach($pengelola_ipa->result() as $pengelola) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td><?php echo $pengelola->nama; ?></td>
+                          <td><?php echo $pengelola->jabatan; ?></td>
+                          <td class="text-center"><a class="detail-pengelola" data-pengelola-id="<?php echo $pengelola->id; ?>" href="javascript:void(0)">Detail</a></td>
+                        </tr>
+                        <?php $i = $i + 1; ?>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             <!-- detail pengelola

@@ -63,6 +63,14 @@ class Profile extends CI_Controller {
       $data['content'] = $p->content;
     }
 
+    $data['pengelola_cpdmsite'] = $this->profile_model->get_pengelola('CPD-MSITE');
+    $data['pengelola_matematika'] = $this->profile_model->get_pengelola('Matematika');
+    $data['pengelola_kimia'] = $this->profile_model->get_pengelola('Kimia');
+    $data['pengelola_fisika'] = $this->profile_model->get_pengelola('Fisika');
+    $data['pengelola_biologi'] = $this->profile_model->get_pengelola('Biologi');
+    $data['pengelola_ilmu_komputer'] = $this->profile_model->get_pengelola('Ilmu Komputer');
+    $data['pengelola_ipa'] = $this->profile_model->get_pengelola('IPA');
+
     $this->load->view('pengelola_view', $data);
   }
 }
