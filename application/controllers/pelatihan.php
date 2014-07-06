@@ -44,6 +44,13 @@ class Pelatihan extends CI_Controller {
       $data['content'] = $p->content;
     }
 
+    $data['matematika'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(1);
+    $data['biologi'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(2);
+    $data['kimia'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(3);
+    $data['fisika'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(4);
+    $data['ilmu_komputer'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(5);
+    $data['ipa'] = $this->pelatihan_model->get_kurikulum_dan_struktur_bidang(6);
+
     $this->load->view('kurikulum_dan_struktur_bidang_view', $data);
   }
 

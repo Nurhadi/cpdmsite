@@ -6,6 +6,14 @@ class Pelatihan_model extends CI_Model {
   {
       parent::__construct();
   }
+
+  public function get_kurikulum_dan_struktur_bidang($id)
+  {
+    $this->db->select('description');
+    $this->db->where('id', $id);
+    $result = $this->db->get('kurikulum_dan_struktur_bidang');
+    return $result->row()->description;
+  }
 }
 
 /* End of file pelatihan_model.php */
