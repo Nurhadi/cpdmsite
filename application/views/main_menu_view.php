@@ -47,6 +47,7 @@
 					<li><a href="#">Download</a></li>
 					<li><a href="<?php echo site_url('pilot_school'); ?>">Pilot School</a></li>
 					<li><a href="<?php echo site_url('gallery'); ?>">Galeri</a></li>
+					<li><a href="<?php echo site_url('contact_person'); ?>">Contact Person</a></li>
 					<!-- <li><a href="<?php echo site_url('peserta/upload_bukti_pembayaran'); ?>">Upload Bukti Pembayaran</a></li> -->
 				</ul>
 
