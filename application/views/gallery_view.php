@@ -54,7 +54,8 @@
 		<div class="container" style="margin-bottom:20px;">
 			<div class="row">
 				<div class="col-lg-12">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+					<p>
+						Kumpulan dokumentasi atau galeri photo pada kegiatan pelatihan yang telah diselenggarakan sebelumnya oleh CPD-MSITE FPMIPA Universitas Pendidikan Indonesia. Segala bentuk dokumentasi kegiatan pelatihan CPD-MSITE FPMIPA Universitas Pendidikan Indonesia akan diposting pada halaman ini.</p>
 				</div>
 			</div>
 		</div>
@@ -99,6 +100,7 @@
 			</div>
 		</div>
 
+		<!--
 		<div class="container" style="margin-bottom:45px;">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -106,6 +108,7 @@
 				</div>
 			</div>
 		</div>
+		-->
 	</section>
 
 <?php $this->load->view('footer_view'); ?>
