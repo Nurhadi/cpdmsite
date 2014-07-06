@@ -15,6 +15,15 @@ class Profile_model extends CI_Model {
     $result = $this->db->get('pengelola');
     return $result;
   }
+
+  public function get_detail_pengelola($pengelola_id)
+  {
+    $this->db->select('nama, alamat, email, telepon, jabatan, photo');
+    $this->db->where('id', $pengelola_id);
+    $this->db->limit(1);
+    $result = $this->db->get('pengelola');
+    return $result;
+  }
 }
 
 /* End of file profile_model.php */

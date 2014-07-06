@@ -1,6 +1,8 @@
 <?php $this->load->view('header_view'); ?>
 <script type="text/javascript">
   $(document).ready(function(){
+    actions();
+
     $('#table-cpdmsite').dataTable();
     $('#table-matematika').dataTable();
     $('#table-kimia').dataTable();
@@ -9,6 +11,38 @@
     $('#table-ilmu_komputer').dataTable();
     $('#table-ipa').dataTable();
   });
+
+  function actions(){
+    $('.detail-pengelola').click(function(){
+      var pengelola_id = $(this).attr('data-pengelola-id');
+      $.ajax({
+        method: "post",
+        url: "get_detail_pengelola",
+        data: {pengelola_id: pengelola_id},
+        success:function(data){
+          if(data !== "error"){
+            var p = data.split("|");
+            $("#nama_pengelola").text(p[0]);
+            $("#alamat_pengelola").text(p[1]);
+            $("#email_pengelola").text(p[2]);
+            $("#telepon_pengelola").text(p[3]);
+            $("#jabatan_pengelola").text(p[4]);
+            $("#foto_pengelola").attr("src","../uploads/pengelola/"+p[5]);
+            $("#box-table-pengelola").hide();
+            $("#box-detail-pengelola").fadeIn("slow");
+          }
+          else{
+            alert('data pengelola tidak ditemukan');
+          }
+        }
+      });
+    });
+
+    $('#back-to-tabs').click(function(){
+      $("#box-detail-pengelola").hide();
+      $("#box-table-pengelola").fadeIn("slow");
+    });
+  }
 </script>
 
 	<section>
@@ -19,7 +53,7 @@
             <div class="col-lg-3">
               <?php $this->load->view('sidebar_profile'); ?>
             </div>
-            <div class="col-lg-9">
+            <div id="box-table-pengelola" class="col-lg-9">
               <h4 class="text-center"><?php echo $title; ?></h4>
               <h5 class="text-center" style="line-height:28px;"><?php echo $content; ?></h5>
               <hr>
@@ -213,49 +247,49 @@
               </div>
             </div>
 
-            <!-- detail pengelola
-            <div class="col-lg-9" style="border:1px solid #ddd; border-radius:5px; min-height:300px; padding-top:20px;">
+            <!-- detail pengelola -->
+            <div id="box-detail-pengelola" class="col-lg-9" style="border:1px solid #ddd; border-radius:5px; min-height:300px; padding-top:20px; padding-bottom:20px; display:none;">
               <div class="row">
                 <div class="col-lg-5 text-center">
-                  <img src="<?php echo base_url('uploads/pengelola/number8.png'); ?>" width="100%"/>
+                  <img id="foto_pengelola" src="" width="100%"/>
                 </div>
                 <div class="col-lg-7 text-left">
                   <table cellpadding="10">
                     <tr>
                       <td>Nama</td>
                       <td>:</td>
-                      <td>Nurhadi Maulana</td>
+                      <td><span id="nama_pengelola"></span></a></td>
                     </tr>
                     <tr>
                       <td valign="top">Alamat</td>
                       <td valign="top">:</td>
-                      <td>Jl. Maleber Utara No. 33 Gang Bakti 1 Rt. 03 Rw. 04 Kec. Andir Kel. Garuda Bandung 40184</td>
+                      <td><span id="alamat_pengelola"></span></td>
                     </tr>
                     <tr>
                       <td>Telepon</td>
                       <td>:</td>
-                      <td>080808080808</td>
+                      <td><span id="telepon_pengelola"></span></td>
                     </tr>
                     <tr>
                       <td>Email</td>
                       <td>:</td>
-                      <td>nurhadimaulana92@gmail.com</td>
+                      <td><span id="email_pengelola"></span></td>
                     </tr>
                     <tr>
                       <td>Jabatan</td>
                       <td>:</td>
-                      <td>Dosen FPMIPA UPI</td>
+                      <td><span id="jabatan_pengelola"></span></td>
                     </tr>
                     <tr>
                       <td></td>
                       <td></td>
-                      <td><a href="#">Kembali ke list data</a></td>
+                      <td><a id="back-to-tabs" href="#" style="color:#0D4173; font-weight:bold;">Kembali ke list data</a></td>
                     </tr>
                   </table>
                 </div>
               </div>
             </div>
-            -->
+            <!-- -->
           </div>
         </div>
       </div>

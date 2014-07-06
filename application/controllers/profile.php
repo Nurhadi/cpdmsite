@@ -73,6 +73,26 @@ class Profile extends CI_Controller {
 
     $this->load->view('pengelola_view', $data);
   }
+
+  public function get_detail_pengelola()
+  {
+    $pengelola_id = $this->input->post('pengelola_id');
+    $pengelola = $this->profile_model->get_detail_pengelola($pengelola_id);
+    if($pengelola->num_rows() > 0){
+      foreach($pengelola->result() as $p){
+        $nama = $p->nama;
+        $alamat = $p->alamat;
+        $email = $p->email;
+        $telepon = $p->telepon;
+        $jabatan = $p->jabatan;
+        $photo = $p->photo;
+      }
+      echo $nama."|".$alamat."|".$email."|".$telepon."|".$jabatan."|".$photo;
+    }
+    else{
+      echo 'error';
+    }
+  }
 }
 
 /* End of file profile.php */
