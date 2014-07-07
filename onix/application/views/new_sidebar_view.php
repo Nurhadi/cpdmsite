@@ -18,23 +18,37 @@
 					<li>
 						<a href="<?php echo site_url('homepage'); ?>"><i class="fa fa-home fa-fw"></i> Homepage</a>
 					</li>
+					<!--
 					<li>
 						<a href="<?php echo site_url('inbox'); ?>"><i class="fa fa-envelope fa-fw">
 							</i> Inbox
 							<?php // if($unread_message > 0){ echo ' ('.$unread_message.')';} ?>
 						</a>
 					</li>
+					-->
+					<li>
+						<a href="<?php echo site_url('page'); ?>"><i class="fa fa-files-o fa-fw"></i> Page</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('kurikulum_dan_struktur_bidang'); ?>"><i class="fa fa-puzzle-piece fa-fw"></i> Kurikulum dan Struktur Bidang</a>
+					</li>
 					<li>
 						<a href="<?php echo site_url('news'); ?>"><i class="fa fa-pencil fa-fw"></i> News</a>
 					</li>
 					<li>
-						<a href="<?php echo site_url('profile'); ?>"><i class="fa fa-users fa-fw"></i> Profile</a>
+						<a href="<?php echo site_url('pengelola'); ?>"><i class="fa fa-user fa-fw"></i> Pengelola</a>
 					</li>
 					<li>
-						<a href="<?php echo site_url('treatment'); ?>"><i class="fa fa-clock-o fa-fw"></i> Treatment</a>
+						<a href="<?php echo site_url('peserta'); ?>"><i class="fa fa-users fa-fw"></i> Peserta</a>
 					</li>
 					<li>
-						<a href="<?php echo site_url('about_us'); ?>"><i class="fa fa-star fa-fw"></i> About Us</a>
+						<a href="<?php echo site_url('gallery'); ?>"><i class="fa fa-folder-o fa-fw"></i> Gallery</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('gallery_photo'); ?>"><i class="fa fa-picture-o fa-fw"></i> Gallery Photo</a>
+					</li>
+					<li>
+						<a href="<?php echo site_url('kesan_pesan'); ?>"><i class="fa fa-comments-o fa-fw"></i> Kesan Pesan</a>
 					</li>
 					<li>
 						<a href="#"><i class="fa fa-user fa-fw"></i> User<span class="fa arrow"></span></a>
