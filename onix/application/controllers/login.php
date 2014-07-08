@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		if($this->session->userdata('email') !== false && $this->session->userdata('logged_in') !== false){
-			redirect('homepage');
+			redirect('/homepage', 'refresh');
 		}
 		else{
 			$this->load->view('login_view');

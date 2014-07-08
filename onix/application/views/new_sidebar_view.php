@@ -42,10 +42,16 @@
 						<a href="<?php echo site_url('peserta'); ?>"><i class="fa fa-users fa-fw"></i> Peserta</a>
 					</li>
 					<li>
-						<a href="<?php echo site_url('gallery'); ?>"><i class="fa fa-folder-o fa-fw"></i> Gallery</a>
-					</li>
-					<li>
-						<a href="<?php echo site_url('gallery_photo'); ?>"><i class="fa fa-picture-o fa-fw"></i> Gallery Photo</a>
+						<a href="#"><i class="fa fa-folder-o fa-fw"></i> Album Photo<span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a href="<?php echo site_url('gallery'); ?>"><i class="fa fa-file fa-fw"></i> Gallery</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url('gallery_photo'); ?>"><i class="fa fa-picture-o fa-fw"></i> Gallery Photo</a>
+							</li>
+						</ul>
+						<!-- /.nav-second-level -->
 					</li>
 					<li>
 						<a href="<?php echo site_url('kesan_pesan'); ?>"><i class="fa fa-comments-o fa-fw"></i> Kesan Pesan</a>
