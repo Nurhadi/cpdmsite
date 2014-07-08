@@ -79,7 +79,7 @@
 		<div style="margin-bottom:15px;" class="container">
 			<div class="row">
 				<?php if($galleries->num_rows() > 0) { ?>
-					<?php $days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; ?>
+					<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
 					<?php $photos_count = 1; ?>
 					<?php $gallery_id = 0; ?>
 					<?php foreach($galleries->result() as $gallery) { ?>

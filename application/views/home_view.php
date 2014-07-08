@@ -47,7 +47,7 @@
 		<div class="container" style="margin-bottom:20px;">
 			<div class="row">
 		  	<?php if($news_with_thumbnail->num_rows() > 0) { ?>
-		  		<?php $days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; ?>
+		  		<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
 		  		<?php foreach($news_with_thumbnail->result() as $news) { ?>
 						<div class="col-lg-4">
 							<a href="">
@@ -63,7 +63,7 @@
 		    <?php } ?>
 				<div class="col-lg-4">
 			  	<?php if($news_list->num_rows() > 0) { ?>
-			  		<?php $days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; ?>
+			  		<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
 			  		<?php foreach($news_list->result() as $news) { ?>
 							<a href="">
 								<p><?php echo substr(strip_tags($news->content), 0, 160); ?>...</p>
@@ -95,7 +95,7 @@
 		<div style="margin-bottom:25px;" class="container-fluid">
 			<div class="photo_gallery">
 		  	<?php if($gallery_photos->num_rows() > 0) { ?>
-		  		<?php $days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]; ?>
+		  		<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
 		  		<?php foreach($gallery_photos->result() as $gallery_photo) { ?>
 			  		<div class="slide"><img src="<?php echo base_url('uploads/gallery_photo/'.$gallery_photo->filename);?>" alt="<?php echo $gallery_photo->title; ?>" title="<?php echo $gallery_photo->title; ?>"></div>
 		    	<?php } ?>
