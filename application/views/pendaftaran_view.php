@@ -53,12 +53,10 @@
 											<option value="Fisika">Silahkan Pilih Kategori</option>
 											<option value="Fisika">Kepala Laboratorium Fisika</option>
 											<option value="Kimia">Kepala Laboratorium Kimia</option>
-											<!--
 											<option value="Biologi">Kepala Laboratorium Biologi</option>
-											<option value="Matematika">Kepala Laboratorium Matematika</option>
-											<option value="Komputer">Kepala Laboratorium Komputer</option>
-											<option value="IPA">Kepala Laboratorium IPA</option>
-											-->
+											<!-- <option value="Matematika">Kepala Laboratorium Matematika</option> -->
+											<!-- <option value="Komputer">Kepala Laboratorium Komputer</option> -->
+											<!-- <option value="IPA">Kepala Laboratorium IPA</option> -->
 										</select>
 									</div>
 								</div>
