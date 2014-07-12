@@ -1,4 +1,4 @@
-	<div class="container-fluid" style="background:#0D4173; height:225px; padding-top:55px;">
+	<div class="container-fluid" style="background:#0D4173; height:200px; padding-top:75px;">
     <div class="container" style="margin-bottom:30px;">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center" style="color:#fff;">
@@ -6,6 +6,7 @@
         </div>
       </div>
     </div>
+    <!--
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -15,6 +16,7 @@
         </div>
       </div>
     </div>
+    -->
   </div>
 
   <div class="container-fluid" style="background:#000; height:80px;">

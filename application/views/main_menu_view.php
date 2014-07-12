@@ -51,6 +51,7 @@
 					<!-- <li><a href="<?php echo site_url('peserta/upload_bukti_pembayaran'); ?>">Upload Bukti Pembayaran</a></li> -->
 				</ul>
 
+				<!--
 				<ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="<?php echo site_url('peserta/daftar'); ?>">
@@ -58,6 +59,7 @@
 	        	</a>
 	        </li>
 				</ul>
+				-->
 			</div><!-- /.navbar-collapse -->
 			</div>
 	</nav>
