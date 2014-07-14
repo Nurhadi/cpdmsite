@@ -56,7 +56,7 @@ class Agenda extends CI_Controller {
 		}
 		else{
 			$agenda_id = $this->input->post("agenda_id");
-			$agenda = $this->agenda_model->update_agenda($title, $link, $created_at, $admin_id);
+			$agenda = $this->agenda_model->update_agenda($agenda_id, $title, $link, $created_at, $admin_id);
 		}
 
 		if($agenda !== false){
