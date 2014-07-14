@@ -42,6 +42,9 @@
 						<a href="<?php echo site_url('news'); ?>"><i class="fa fa-pencil fa-fw"></i> News</a>
 					</li>
 					<li>
+						<a href="<?php echo site_url('download'); ?>"><i class="fa fa-cloud-download fa-fw"></i> Download</a>
+					</li>
+					<li>
 						<a href="<?php echo site_url('pengelola'); ?>"><i class="fa fa-user fa-fw"></i> Pengelola</a>
 					</li>
 					<li>
