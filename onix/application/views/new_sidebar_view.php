@@ -30,6 +30,9 @@
 						<a href="<?php echo site_url('page'); ?>"><i class="fa fa-files-o fa-fw"></i> Page</a>
 					</li>
 					<li>
+						<a href="<?php echo site_url('agenda'); ?>"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
+					</li>
+					<li>
 						<a href="<?php echo site_url('kurikulum_dan_struktur_bidang'); ?>"><i class="fa fa-puzzle-piece fa-fw"></i> Kurikulum dan Struktur Bidang</a>
 					</li>
 					<li>
