@@ -78,10 +78,10 @@ class Agenda extends CI_Controller {
 			}
 			else
 			{
-				// $old_photo_path = $this->agenda_model->get_photo_path($agenda_id);
-				// if($old_photo_path !== false){
-				// 	unlink("./../uploads/agenda/".$old_photo_path);
-				// }
+				$old_photo_path = $this->agenda_model->get_photo_path($agenda_id);
+				if($old_photo_path !== false){
+					unlink("./../uploads/agenda/".$old_photo_path);
+				}
 
 				$data = array('upload_data' => $this->upload->data());
 				$file_path = $data["upload_data"]["file_name"];

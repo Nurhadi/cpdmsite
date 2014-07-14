@@ -77,10 +77,12 @@ class Agenda_model extends CI_Model
 		$this->db->select('filename')->from('agenda')->where('id',$agenda_id);
     $query = $this->db->get();
 
-    if ($query->num_rows() > 0) {
+    if ($query->row()->filename !== "") {
       return $query->row()->filename;
     }
-    return false;
+    else{
+    	return false;
+    }
 	}
 }
 

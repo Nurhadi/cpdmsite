@@ -33,6 +33,9 @@
 						<a href="<?php echo site_url('agenda'); ?>"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
 					</li>
 					<li>
+						<a href="<?php echo site_url('surat_izin'); ?>"><i class="fa fa-suitcase fa-fw"></i> Surat Izin</a>
+					</li>
+					<li>
 						<a href="<?php echo site_url('kurikulum_dan_struktur_bidang'); ?>"><i class="fa fa-puzzle-piece fa-fw"></i> Kurikulum dan Struktur Bidang</a>
 					</li>
 					<li>
