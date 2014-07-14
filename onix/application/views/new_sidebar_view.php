@@ -48,6 +48,9 @@
 						<a href="<?php echo site_url('pengelola'); ?>"><i class="fa fa-user fa-fw"></i> Pengelola</a>
 					</li>
 					<li>
+						<a href="<?php echo site_url('periode_pelatihan'); ?>"><i class="fa fa-flag fa-fw"></i> Periode Pelatihan</a>
+					</li>
+					<li>
 						<a href="<?php echo site_url('peserta'); ?>"><i class="fa fa-users fa-fw"></i> Peserta</a>
 					</li>
 					<li>
