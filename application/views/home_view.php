@@ -62,16 +62,21 @@
 		    	<?php } ?>
 		    <?php } ?>
 				<div class="col-lg-4">
-			  	<?php if($news_list->num_rows() > 0) { ?>
-			  		<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
-			  		<?php foreach($news_list->result() as $news) { ?>
-							<a href="">
-								<p><?php echo substr(strip_tags($news->content), 0, 160); ?>...</p>
-							</a>
-							<p style="color:#01C1F4;"><?php echo $days[date("N", strtotime($news->created_at))].", ".date("d M Y", strtotime($news->created_at)); ?></p>
-							<hr>
-			    	<?php } ?>
-			    <?php } ?>
+			  	<?php if($agenda_terkini->num_rows() > 0) { ?>
+			  		<?php foreach($agenda_terkini->result() as $agenda) { ?>
+					  	<a href="<?php echo $agenda->link; ?>" style="margin-bottom:10px; display:block;" target="blank">
+					  		<img src="<?php echo base_url('uploads/agenda/'.$agenda->filename);?>" width="100%" height="100px;" alt="<?php echo $agenda->title; ?>" title="<?php echo $agenda->title; ?>"/>
+					  	</a>
+			  		<?php } ?>
+			  	<?php } ?>
+
+			  	<?php if($surat_izin->num_rows() > 0) { ?>
+			  		<?php foreach($surat_izin->result() as $surat) { ?>
+					  	<a href="<?php echo base_url('uploads/surat_izin/'.$surat->filename); ?>" style="margin-bottom:10px; display:block;" target="blank">
+					  		<img src="<?php echo base_url('assets/images/surat_izin.jpg');?>" width="100%" height="100px;" alt="<?php echo $agenda->title; ?>" title="<?php echo $agenda->title; ?>"/>
+					  	</a>
+			  		<?php } ?>
+			  	<?php } ?>
 				</div>
 			</div>
 		</div>

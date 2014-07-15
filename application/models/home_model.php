@@ -29,6 +29,24 @@ class Home_model extends CI_Model {
     return $result;
   }
 
+  public function get_agenda()
+  {
+    $this->db->select('title, link, filename');
+    $this->db->limit(2);
+    $this->db->order_by('created_at', 'desc');
+    $result = $this->db->get('agenda');
+    return $result;
+  }
+
+  public function get_surat_izin()
+  {
+    $this->db->select('title, filename');
+    $this->db->limit(1);
+    $this->db->order_by('created_at', 'desc');
+    $result = $this->db->get('surat_izin');
+    return $result;
+  }
+
   public function get_gallery_photos()
   {
     $this->db->select('id, gallery_id, title, description, filename');

@@ -176,7 +176,7 @@
 											<td><input type="text" class="form-control" name="link" id="link"/></td>
 										</tr>
 										<tr>
-											<td>Photo (324 x 260)</td>
+											<td>Photo (360 x 100)</td>
 											<td width="100"></td>
 											<td>
 												<input type="button" class="btn btn-default" id="btn-choose-photo" value="Choose Image"/>
