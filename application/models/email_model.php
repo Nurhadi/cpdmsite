@@ -115,6 +115,38 @@ class Email_model extends CI_Model {
 		$this->email->send();
   }
 
+  public function contact_person($nama_lengkap, $email, $subject, $pesan)
+  {
+  	$this->load->library('email');
+  	$config['mailtype'] = 'html';
+		$config['protocol'] = "smtp";
+		$config['smtp_host'] = "smtp.mandrillapp.com";
+		$config['smtp_port'] = "587";
+		$config['smtp_user'] = "nurhadimaulana92@gmail.com";
+		$config['smtp_pass'] = "V9PpeyZQ9Ja6mRpAShLbzQ";
+		$config['charset'] = "utf-8";
+		$config['mailtype'] = "html";
+
+		$this->email->initialize($config);
+
+		$this->email->from($email, $nama_lengkap);
+		$this->email->to('nurhadimaulana92@gmail.com');
+		// $this->email->cc('another@another-example.com');
+		// $this->email->bcc('them@their-example.com');
+
+		$this->email->subject('CPD-MSITE Contact Person - '.$subject);
+		$this->email->message('
+			<html>
+			<head></head>
+			<body>
+				'.$pesan.'
+			</body>
+			</html>
+		');
+
+		$this->email->send();
+  }
+
 }
 
 /* End of file email_model.php */

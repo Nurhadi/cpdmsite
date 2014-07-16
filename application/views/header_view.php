@@ -35,7 +35,7 @@
       	timpicker: false
      	});
 
-      $('#form-pendaftaran, #form-upload-bukti-pembayaran').validate({
+      $('#form-pendaftaran, #form-upload-bukti-pembayaran, #form-contact-us').validate({
       	rules: {
       		field: {
       			required: true,

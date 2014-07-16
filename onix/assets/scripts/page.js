@@ -127,14 +127,14 @@ $(document).ready(function(){
 		var keywords = $('#keywords').val();
 		var description = $('#description').val();
 		var form_action = $('#form_action').val();
-		if(form_action === "create"){
-			var content = $('.content').val();
-		}
-		else if(form_action === "update"){
-			var content = $('.content').html();
-		}
+		// if(form_action === "create"){
+		// 	var content = $('.content').val();
+		// }
+		// else if(form_action === "update"){
+		// 	var content = $('.content').html();
+		// }
 
-		if(title === "" || keywords === "" || description === "" || content === "" || form_action === ""){
+		if(title === "" || keywords === "" || description === "" || form_action === ""){
 			$(".alert").slideDown();
 			setTimeout(function(){
 				$(".alert").slideUp();
