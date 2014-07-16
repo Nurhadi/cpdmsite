@@ -15,6 +15,8 @@
                 <?php if($this->uri->segment(3) === "sertifikat"){$status = "active";} else {$status = "";} ?>
                 <a href="<?php echo site_url('pelatihan/bimtek/sertifikat'); ?>" class="list-group-item text-left <?php echo $status; ?>">Sertifikat</a>
                 <a href="<?php echo site_url('peserta/daftar'); ?>" class="list-group-item text-left">Pendaftaran / Daftar</a>
+                <?php if($this->uri->segment(1) === "kesan_pesan"){$status = "active";} else {$status = "";} ?>
+                <a href="<?php echo site_url('kesan_pesan'); ?>" class="list-group-item text-left <?php echo $status; ?>">Kesan Pesan Pelatihan</a>
                 <?php if($this->uri->segment(3) === "informasi_penginapan"){$status = "active";} else {$status = "";} ?>
                 <a href="<?php echo site_url('pelatihan/bimtek/informasi_penginapan'); ?>" class="list-group-item text-left <?php echo $status; ?>">Informasi Penginapan</a>
               </div>

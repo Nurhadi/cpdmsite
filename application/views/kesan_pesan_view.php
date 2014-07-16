@@ -7,40 +7,43 @@
 
   <section>
     <div class="container" style="margin-top:10px; margin-bottom:35px;">
-      <?php
-        if($this->session->flashdata('status'))
-        {
-          if($this->session->flashdata('status') === 'success')
-          {
-            ?>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="alert alert-success">
-                  <?php echo $this->session->flashdata('message'); ?>
-                </div>
-              </div>
-            </div>
-            <?php
-          }
-          else
-          {
-            ?>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="alert alert-error">
-                  <?php echo $this->session->flashdata('message'); ?>
-                </div>
-              </div>
-            </div>
-            <?php
-          }
-        }
-      ?>
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
-            <div class="col-lg-12">
-              <h4 style="line-height:28px;"><?php echo $title; ?></h4>
+            <div class="col-lg-3">
+              <?php $this->load->view('sidebar_pelatihan'); ?>
+            </div>
+            <div class="col-lg-9">
+              <?php
+                if($this->session->flashdata('status'))
+                {
+                  if($this->session->flashdata('status') === 'success')
+                  {
+                    ?>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="alert alert-success">
+                          <?php echo $this->session->flashdata('message'); ?>
+                        </div>
+                      </div>
+                    </div>
+                    <?php
+                  }
+                  else
+                  {
+                    ?>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="alert alert-error">
+                          <?php echo $this->session->flashdata('message'); ?>
+                        </div>
+                      </div>
+                    </div>
+                    <?php
+                  }
+                }
+              ?>
+              <h4 style="line-height:28px;">Pelatihan > Bimtek > <?php echo $title; ?></h4>
               <hr>
               <?php
                 $attributes = array('class' => 'bs-example form-horizontal', 'id' => 'form-contact-us', 'style' => 'max-width:400px; margin-left:15px;');
@@ -59,7 +62,7 @@
                   <input type="text" class="form-control" id="kota" name="kota" placeholder="Masukkan nama kota Anda" required/>
                 </div>
                 <div class="form-group">
-                  <label for="thumbnail">Foto</label>
+                  <label for="thumbnail">Foto (640 x 640)</label>
                   <input type="file" class="form-control" id="thumbnail" name="thumbnail" required size="20"/>
                 </div>
                 <div class="form-group">

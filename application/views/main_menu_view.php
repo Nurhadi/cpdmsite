@@ -34,6 +34,8 @@
                   <li><a href="<?php echo site_url('pelatihan/bimtek/peserta'); ?>">Peserta</a></li>
                   <li><a href="<?php echo site_url('pelatihan/bimtek/evaluasi'); ?>">Evaluasi</a></li>
                   <li><a href="<?php echo site_url('pelatihan/bimtek/sertifikat'); ?>">Sertifikat</a></li>
+                  <li><a href="<?php echo site_url('peserta/daftar'); ?>">Pendaftaran / Daftar</a></li>
+                  <li><a href="<?php echo site_url('kesan_pesan'); ?>">Kesan Pesan Pelatihan</a></li>
                   <li><a href="<?php echo site_url('pelatihan/bimtek/informasi_penginapan'); ?>">Informasi Penginapan</a></li>
                 </ul>
                </li>
