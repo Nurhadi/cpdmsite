@@ -130,7 +130,7 @@ class Email_model extends CI_Model {
 		$this->email->initialize($config);
 
 		$this->email->from($email, $nama_lengkap);
-		$this->email->to('nurhadimaulana92@gmail.com');
+		$this->email->to('cpdmsite@upi.edu');
 		// $this->email->cc('another@another-example.com');
 		// $this->email->bcc('them@their-example.com');
 
