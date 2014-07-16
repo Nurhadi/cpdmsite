@@ -13,7 +13,7 @@
             <div class="col-lg-12">
               <h4 style="line-height:28px;"><?php echo $title; ?></h4>
               <hr>
-              <?php // echo $content; ?>
+              <?php echo $content; ?>
               <hr>
               <?php
                 if($this->session->flashdata('status'))
@@ -45,8 +45,10 @@
                 }
               ?>
 
+              <h4>Contact Us</h4>
+              <hr>
               <?php
-                $attributes = array('class' => 'bs-example form-horizontal', 'id' => 'form-contact-us', 'style' => 'max-width:400px;');
+                $attributes = array('class' => 'bs-example form-horizontal', 'id' => 'form-contact-us', 'style' => 'max-width:400px; margin-left:15px;');
                 echo form_open('contact_person/contact_person_process', $attributes);
               ?>
                 <div class="form-group">
@@ -59,7 +61,7 @@
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="subject" class="form-control" id="subject" name="subject" placeholder="Subject Pesan"/>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject Pesan"/>
                 </div>
                 <div class="form-group">
                   <label for="pesan">Pesan atau pertanyaan</label>
