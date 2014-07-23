@@ -6,6 +6,7 @@ class Pelatihan extends CI_Controller {
     parent::__construct();
     $this->load->model('pelatihan_model');
     $this->load->model('page_model');
+    $this->load->model('peserta_model');
     $this->load->library('homepage');
   }
 
@@ -107,6 +108,24 @@ class Pelatihan extends CI_Controller {
       $data['description'] = $p->description;
       $data['content'] = $p->content;
     }
+
+    $page = $this->page_model->get_data_page(13);
+    foreach($page->result() as $p){
+      $data['title_persyaratan'] = $p->title;
+      $data['keywords_persyaratan'] = $p->keywords;
+      $data['description_persyaratan'] = $p->description;
+      $data['content_persyaratan'] = $p->content;
+    }
+
+    $page = $this->page_model->get_data_page(14);
+    foreach($page->result() as $p){
+      $data['title_rekap_peserta'] = $p->title;
+      $data['keywords_rekap_peserta'] = $p->keywords;
+      $data['description_rekap_peserta'] = $p->description;
+      $data['content_rekap_peserta'] = $p->content;
+    }
+
+    $data['peserta_terdaftar'] = $this->peserta_model->get_peserta_terdaftar();
 
     $this->load->view('peserta_view', $data);
   }

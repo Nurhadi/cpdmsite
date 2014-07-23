@@ -35,7 +35,7 @@ class Gallery_photo_model extends CI_Model
 		return($this->db->affected_rows() != 1) ? false : $this->db->insert_id();
 	}
 
-	public function update_gallery_photo($gallery_photo_id, $title, $description, $created_at, $admin_id)
+	public function update_gallery_photo($gallery_photo_id, $gallery_id, $title, $description, $created_at, $admin_id)
 	{
 		$data = array("gallery_id" => $gallery_id, "title" => $title, "description" => $description, "created_at" => $created_at, "admin_id" => $admin_id);
 		$this->db->where("id", $gallery_photo_id);
@@ -80,7 +80,10 @@ class Gallery_photo_model extends CI_Model
     if ($query->num_rows() > 0) {
       return $query->row()->filename;
     }
-    return false;
+    else
+    {
+    	return false;
+    }
 	}
 }
 

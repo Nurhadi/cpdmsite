@@ -84,9 +84,11 @@ class Gallery_photo extends CI_Controller {
 			}
 			else
 			{
-				$old_photo_path = $this->gallery_photo_model->get_photo_path($gallery_photo_id);
-				if($old_photo_path !== false){
-					unlink("./../uploads/gallery_photo/".$old_photo_path);
+				if($form_action === "update"){
+					$old_photo_path = $this->gallery_photo_model->get_photo_path($gallery_photo_id);
+					if($old_photo_path !== false){
+						unlink("./../uploads/gallery_photo/".$old_photo_path);
+					}
 				}
 
 				$data = array('upload_data' => $this->upload->data());

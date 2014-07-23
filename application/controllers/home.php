@@ -22,7 +22,7 @@ class Home extends CI_Controller {
     $data['sliders'] = $this->home_model->get_sliders();
     $data['news_with_thumbnail'] = $this->home_model->get_news(2);
     $data['agenda_terkini'] = $this->home_model->get_agenda();
-    $data['surat_izin'] = $this->home_model->get_surat_izin();
+    // $data['surat_izin'] = $this->home_model->get_surat_izin();
     $data['kesan_pesan'] = $this->home_model->get_kesan_pesan();
     $data['gallery_photos'] = $this->home_model->get_gallery_photos();
 		$this->load->view('home_view', $data);

@@ -32,20 +32,20 @@ class Home_model extends CI_Model {
   public function get_agenda()
   {
     $this->db->select('title, link, filename');
-    $this->db->limit(2);
+    $this->db->limit(3);
     $this->db->order_by('created_at', 'desc');
     $result = $this->db->get('agenda');
     return $result;
   }
 
-  public function get_surat_izin()
-  {
-    $this->db->select('title, filename');
-    $this->db->limit(1);
-    $this->db->order_by('created_at', 'desc');
-    $result = $this->db->get('surat_izin');
-    return $result;
-  }
+  // public function get_surat_izin()
+  // {
+  //   $this->db->select('title, filename');
+  //   $this->db->limit(1);
+  //   $this->db->order_by('created_at', 'desc');
+  //   $result = $this->db->get('surat_izin');
+  //   return $result;
+  // }
 
   public function get_gallery_photos()
   {
@@ -62,6 +62,14 @@ class Home_model extends CI_Model {
     $this->db->order_by('tanggal_disetujui', 'desc');
     $result = $this->db->get('kesan_pesan');
     return $result;
+  }
+
+  public function get_data_admin($admin_id)
+  {
+    $this->db->select('firstname, lastname');
+    $this->db->where('id', $admin_id);
+    $result = $this->db->get('admin');
+    return UCFirst($result->row()->firstname).' '.UCFirst($result->row()->lastname);
   }
 }
 

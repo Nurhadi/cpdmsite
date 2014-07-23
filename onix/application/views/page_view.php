@@ -47,8 +47,8 @@
 													<td><?php echo $page->keywords ?></td>
 													<td class="text-center">
 														<a href="javascript:void(0)" data-page-id="<?php echo $page->page_id; ?>" class="text-detail-page">Detail</a> |
-														<a href="javascript:void(0)" data-page-id="<?php echo $page->page_id; ?>" class="text-edit-page">Edit</a> |
-														<a href="javascript:void(0)" data-page-id="<?php echo $page->page_id; ?>" class="text-delete-page">Delete</a>
+														<a href="javascript:void(0)" data-page-id="<?php echo $page->page_id; ?>" class="text-edit-page">Edit</a> <!-- |
+														<a href="javascript:void(0)" data-page-id="<?php echo $page->page_id; ?>" class="text-delete-page">Delete</a> -->
 													</td>
 												</tr>
 												<?php

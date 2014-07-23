@@ -230,7 +230,7 @@
                 	<tr><td>Alamat</td><td><label id="d_alamat"></label></td></tr>
                   <tr><td>Email</td><td><label id="d_email"></label></td></tr>
                   <tr><td>Telepon</td><td><label id="d_telepon"></label></td></tr>
-                  <tr><td>Jabatan</td><td><label id="jabatan"></label></td></tr>
+                  <tr><td>Jabatan</td><td><label id="d_jabatan"></label></td></tr>
                 	<tr><td>Photo</td><td><img src="" id="d_photo" width="200"/></td></tr>
                 	<tr><td>Pengelola Bagian</td><td><label id="d_pengelola_bagian"></label></td></tr>
                 	<tr><td>Tanggal Dibuat</td><td><label id="d_tanggal_dibuat"></label></td></tr>

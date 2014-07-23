@@ -99,7 +99,10 @@ class News_model extends CI_Model
     if ($query->num_rows() > 0) {
       return $query->row()->thumbnail;
     }
-    return false;
+    else
+    {
+    	return false;
+    }
 	}
 
 	public function get_small_thumbnail_path($news_id){
@@ -109,7 +112,10 @@ class News_model extends CI_Model
     if ($query->num_rows() > 0) {
       return $query->row()->small_thumbnail;
     }
-    return false;
+    else
+    {
+    	return false;
+    }
 	}
 }
 

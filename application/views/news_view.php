@@ -29,58 +29,23 @@
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-8">
-              <div class="row" style="margin-bottom:30px;">
-                <div class="col-lg-4">
-                  <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
-                </div>
-                <div class="col-lg-8">
-                  <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                  </a>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                  </p>
-                </div>
-              </div>
-              <div class="row" style="margin-bottom:30px;">
-                <div class="col-lg-4">
-                  <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
-                </div>
-                <div class="col-lg-8">
-                  <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                  </a>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                  </p>
-                </div>
-              </div>
-              <div class="row" style="margin-bottom:30px;">
-                <div class="col-lg-4">
-                  <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
-                </div>
-                <div class="col-lg-8">
-                  <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                  </a>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                  </p>
-                </div>
-              </div>
-              <div class="row" style="margin-bottom:30px;">
-                <div class="col-lg-4">
-                  <img src="<?php echo base_url('uploads/news/sample_news_1.jpg'); ?>" width="100%">
-                </div>
-                <div class="col-lg-8">
-                  <a href="#" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                  </a>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                  </p>
-                </div>
-              </div>
+              <?php if($newss->num_rows() > 0) { ?>
+                <?php foreach($newss->result() as $news) { ?>
+                  <div class="row" style="margin-bottom:30px;">
+                    <div class="col-lg-4">
+                      <img src="<?php echo base_url('uploads/news/'.$news->small_thumbnail); ?>" width="100%">
+                    </div>
+                    <div class="col-lg-8">
+                      <a href="<?php echo site_url('news/detail/'.url_title($news->title).'/'.$news->news_id); ?>" style="font-size:1.2em; font-weight:bold; color:#0D4173;">
+                        <?php echo $news->title; ?>
+                      </a>
+                      <p>
+                        <?php echo word_limiter(strip_tags($news->content), 50); ?>
+                      </p>
+                    </div>
+                  </div>
+                <?php } ?>
+              <?php } ?>
             </div>
             <div class="col-lg-4">
               <div style="border-bottom:1px solid #ccc; margin-bottom:10px;">
@@ -91,26 +56,20 @@
                   <div style="border-bottom:1px solid #ccc; padding-bottom:8px;">
                     <a href="javascript:void(0)" class="archive-toggle">
                       <img src="<?php echo base_url('assets/images/forward_enabled_hover_bottom.png'); ?>" class="arrow-archive" data-type="active"/>
-                      2014 (4)
+                      2014 (<?php echo $archived_news->num_rows(); ?>)
                     </a>
                   </div>
                   <div class="box-archive" style="margin-top:5px; margin-left:23px;">
-                    <a href="#" style="display:block; margin-bottom:5px;">
-                      Lorem ipsum dolor sit amet
-                    </a>
-                    <a href="#" style="display:block; margin-bottom:5px;">
-                      Testing Percobaan News Archives
-                    </a>
-                    <a href="#" style="display:block; margin-bottom:5px;">
-                      Lorem ipsum dolor sit amet
-                    </a>
-                    <a href="#" style="display:block; margin-bottom:5px;">
-                      Testing Percobaan News Archives
-                    </a>
+                    <?php if($archived_news->num_rows() > 0) { ?>
+                      <?php foreach($archived_news->result() as $news) { ?>
+                        <a href="<?php echo site_url('news/detail/'.url_title($news->title).'/'.$news->news_id); ?>" style="display:block; margin-bottom:5px;">
+                          <?php echo $news->title; ?>
+                        </a>
+                      <?php } ?>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

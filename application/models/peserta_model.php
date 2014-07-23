@@ -87,6 +87,13 @@ class Peserta_model extends CI_Model {
 		}
 	}
 
+	public function get_peserta_terdaftar(){
+		$this->db->select('nama_lengkap, nidn_nip, instansi, periode_pelatihan');
+		$this->db->where('status', 'approved');
+		$result = $this->db->get('peserta');
+		return $result;
+	}
+
 }
 
 /* End of file peserta_model.php */

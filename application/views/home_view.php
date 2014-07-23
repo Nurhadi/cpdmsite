@@ -50,10 +50,10 @@
 		  		<?php $days = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"); ?>
 		  		<?php foreach($news_with_thumbnail->result() as $news) { ?>
 						<div class="col-lg-4">
-							<a href="">
+							<a href="<?php echo site_url('news/detail/'.url_title($news->title).'/'.$news->news_id); ?>">
 							<img src="<?php echo base_url('uploads/news/'.$news->small_thumbnail); ?>" width="100%"/>
 							</a>
-							<a href="">
+							<a href="<?php echo site_url('news/detail/'.url_title($news->title).'/'.$news->news_id); ?>">
 								<h5><?php echo $news->title; ?></h5>
 							</a>
 							<p><?php echo substr(strip_tags($news->content), 0, 160); ?>...</p>
@@ -70,13 +70,15 @@
 			  		<?php } ?>
 			  	<?php } ?>
 
-			  	<?php if($surat_izin->num_rows() > 0) { ?>
-			  		<?php foreach($surat_izin->result() as $surat) { ?>
-					  	<a href="<?php echo base_url('uploads/surat_izin/'.$surat->filename); ?>" style="margin-bottom:10px; display:block;" target="blank">
-					  		<img src="<?php echo base_url('assets/images/surat_izin.jpg');?>" width="100%" height="100px;" alt="<?php echo $agenda->title; ?>" title="<?php echo $agenda->title; ?>"/>
+			  	<?php // if($surat_izin->num_rows() > 0) { ?>
+			  		<?php // foreach($surat_izin->result() as $surat) { ?>
+					  	<!--
+					  	<a href="<?php // echo base_url('uploads/surat_izin/'.$surat->filename); ?>" style="margin-bottom:10px; display:block;" target="blank">
+					  		<img src="<?php // echo base_url('assets/images/surat_izin.jpg');?>" width="100%" height="100px;" alt="<?php echo $agenda->title; ?>" title="<?php echo $agenda->title; ?>"/>
 					  	</a>
-			  		<?php } ?>
-			  	<?php } ?>
+					  	-->
+			  		<?php // } ?>
+			  	<?php // } ?>
 				</div>
 			</div>
 		</div>

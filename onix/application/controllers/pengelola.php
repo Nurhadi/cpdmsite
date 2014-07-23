@@ -86,9 +86,12 @@ class Pengelola extends CI_Controller {
 			}
 			else
 			{
-				$old_photo_path = $this->pengelola_model->get_photo_path($pengelola_id);
-				if($old_photo_path !== false){
-					unlink("./../uploads/pengelola/".$old_photo_path);
+				if($form_action === "update")
+				{
+					$old_photo_path = $this->pengelola_model->get_photo_path($pengelola_id);
+					if($old_photo_path !== false){
+						unlink("./../uploads/pengelola/".$old_photo_path);
+					}
 				}
 
 				$data = array('upload_data' => $this->upload->data());

@@ -42,7 +42,7 @@ $route['default_controller'] = "home/index";
 $route['peserta/daftar'] = "peserta/daftar";
 $route['peserta/upload_bukti_pembayaran'] = "peserta/upload_bukti_pembayaran";
 $route['berita'] = "news/index";
-$route['berita/detail'] = "news/detail";
+$route['berita/detail/(:any)/(:num)'] = "news/detail";
 
 # pelatihan/bimtek
 $route['pelatihan/bimtek/penjelasan_program_bimtek'] = "pelatihan/penjelasan_program_bimtek";

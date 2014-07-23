@@ -80,7 +80,10 @@ class Pengelola_model extends CI_Model
     if ($query->num_rows() > 0) {
       return $query->row()->photo;
     }
-    return false;
+    else
+    {
+    	return false;
+    }
 	}
 }
 

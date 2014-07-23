@@ -70,13 +70,16 @@ class News extends CI_Controller {
 			if (!$this->upload->do_upload("thumbnail"))
 			{
 					$this->session->set_flashdata("status", $this->upload->display_errors());
-					redirect("news");
+					// redirect("news");
 			}
 			else
 			{
-				$old_thumbnail_path = $this->news_model->get_thumbnail_path($news_id);
-				if($old_thumbnail_path !== false){
-					unlink("./../uploads/news/".$old_thumbnail_path);
+				if($form_action === "update")
+				{
+					$old_thumbnail_path = $this->news_model->get_thumbnail_path($news_id);
+					if($old_thumbnail_path !== false){
+						unlink("./../uploads/news/".$old_thumbnail_path);
+					}
 				}
 
 				$data = array('upload_data' => $this->upload->data());
@@ -87,13 +90,16 @@ class News extends CI_Controller {
 			if (!$this->upload->do_upload("small-thumbnail"))
 			{
 					$this->session->set_flashdata("status", $this->upload->display_errors());
-					redirect("news");
+					// redirect("news");
 			}
 			else
 			{
-				$old_small_thumbnail_path = $this->news_model->get_small_thumbnail_path($news_id);
-				if($old_small_thumbnail_path !== false){
-					unlink("./../uploads/news/".$old_small_thumbnail_path);
+				if($form_action === "update")
+				{
+					$old_small_thumbnail_path = $this->news_model->get_small_thumbnail_path($news_id);
+					if($old_small_thumbnail_path !== false){
+						unlink("./../uploads/news/".$old_small_thumbnail_path);
+					}
 				}
 
 				$data = array('upload_data' => $this->upload->data());
