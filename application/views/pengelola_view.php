@@ -55,7 +55,7 @@
             </div>
             <div id="box-table-pengelola" class="col-lg-9">
               <h4 class="text-center"><?php echo $title; ?></h4>
-              <h5 class="text-center" style="line-height:28px;"><?php echo $content; ?></h5>
+              <h5 class="text-center" style="line-height:28px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..></h5>
               <hr>
               <!-- Nav tabs -->
               <ul class="nav nav-tabs" role="tablist">

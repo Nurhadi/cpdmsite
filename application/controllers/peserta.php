@@ -6,6 +6,7 @@ class Peserta extends CI_Controller {
 		parent::__construct();
 		$this->load->model('peserta_model');
 		$this->load->model('page_model');
+		$this->load->model('email_model');
 		$this->load->library('homepage');
 	}
 
